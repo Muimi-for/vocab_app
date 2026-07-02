@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 导入第 3 天</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        h1 { margin: 0 0 10px; color: #4f46e5; }
+        p { color: #6b7280; }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled { background: #9ca3af; cursor: not-allowed; }
+        .message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+        .success { background: #d1fae5; color: #065f46; }
+        .error { background: #fee2e2; color: #991b1b; }
+        .details { margin-top: 12px; font-size: 0.9rem; }
+    </style>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>导入第 3 天词汇</h1>
+            <p>将第 3 天的 28 个单词（8 重点 + 20 非重点）导入到「词汇随记」。</p>
+            <button id="import-btn">立即导入</button>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        const BATCH_DATA = 
+[
+  {
+    "id": "volatile",
+    "word": "volatile",
+    "meaning": "adj. 易波动的；喜怒无常的；易挥发的",
+    "phrases": [
+      { "text": "volatile market / prices / volatile economic situation", "important": true },
+      { "text": "volatile temper", "important": true },
+      { "text": "volatile scent", "important": true }
+    ],
+    "examples": ["Adolescence may bring volatile moods to teenagers."],
+    "notes": "常与 market / price / situation 搭配；名词 volatility 也很常用。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["fluctuating", "unstable", "erratic"],
+      "derivatives": ["volatility"],
+      "confusable": ["versatile"],
+      "roots": ["-vol- (fly, 飞)"]
+    }
+  },
+  {
+    "id": "resonate",
+    "word": "resonate",
+    "meaning": "vi. 共鸣；共振",
+    "phrases": [
+      { "text": "resonate with sb.", "important": true }
+    ],
+    "examples": ["Her story resonated with countless young people."],
+    "notes": "引申义“引起共鸣”比物理“共振”更常考。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["echo", "reverberate", "strike a chord"],
+      "derivatives": ["resonance", "resonant"],
+      "confusable": ["renovate"],
+      "roots": ["-son- (sound, 声音)"]
+    }
+  },
+  {
+    "id": "miniature",
+    "word": "miniature",
+    "meaning": "n. 微型模型；缩影；adj. 微型的",
+    "phrases": [
+      { "text": "a miniature of / in miniature 小规模地；是一个缩影", "important": true },
+      { "text": "miniature camera / garden", "important": true }
+    ],
+    "examples": ["This small town is a miniature of modern society."],
+    "notes": "in miniature 表示“以缩影形式”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["model", "tiny", "small-scale"],
+      "derivatives": ["miniaturize", "miniaturization"],
+      "confusable": ["minimum", "minimal"],
+      "roots": ["-min- (small, 小)"]
+    }
+  },
+  {
+    "id": "vegetation",
+    "word": "vegetation",
+    "meaning": "n. 植被",
+    "phrases": [
+      { "text": "tropical vegetation / sparse vegetation / cover of vegetation", "important": true }
+    ],
+    "examples": ["The mountain is covered with thick vegetation."],
+    "notes": "统称，不可数名词；与 vegetable 同根。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["plants", "flora", "greenery"],
+      "derivatives": ["vegetate", "vegetative"],
+      "confusable": ["vegetable", "vegetarian"],
+      "roots": ["-veg- (alive/lively, 活的/有活力的)"]
+    }
+  },
+  {
+    "id": "surpass",
+    "word": "surpass",
+    "meaning": "vt. 超过（数量、能力等）；优于",
+    "phrases": [
+      { "text": "surpass expectations / surpass the limit / surpass belief", "important": true },
+      { "text": "surpass sb. in sth. / surpass all rivals", "important": true }
+    ],
+    "examples": ["This new model surpasses its competitors in energy efficiency."],
+    "notes": "直接接宾语，无被动语态；易混词 suppress。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["exceed", "transcend", "outdo"],
+      "derivatives": ["surpassing"],
+      "confusable": ["suppress"],
+      "roots": ["sur- (over, 超过)", "-pass- (pass, 通过)"]
+    }
+  },
+  {
+    "id": "retain",
+    "word": "retain",
+    "meaning": "vt. 保留；记住；维持；聘请",
+    "phrases": [
+      { "text": "retain rights / retain the original flavor / retain the ability to do sth.", "important": true },
+      { "text": "retain information / knowledge", "important": true },
+      { "text": "retain a lawyer", "important": true }
+    ],
+    "examples": ["It's hard to retain information only by rote memorization."],
+    "notes": "可接抽象名词（information, knowledge）或人（lawyer）。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["keep", "maintain", "preserve"],
+      "derivatives": ["retention", "retentive"],
+      "confusable": ["remain", "restrain"],
+      "roots": ["re- (back, 回)", "-tain- (hold, 持/握)"]
+    }
+  },
+  {
+    "id": "evolutionary",
+    "word": "evolutionary",
+    "meaning": "adj. 进化的，演变式的；逐渐发展的",
+    "phrases": [
+      { "text": "evolutionary theory / progress", "important": true },
+      { "text": "evolutionary development / improvement", "important": true }
+    ],
+    "examples": ["The evolutionary progress of civilization never stops."],
+    "notes": "来自 evolution + -ary。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["developmental", "progressive"],
+      "derivatives": ["evolution", "evolve"],
+      "confusable": ["revolutionary"],
+      "roots": ["-volv- / -volu- (roll, 卷/转)"]
+    }
+  },
+  {
+    "id": "compound",
+    "word": "compound",
+    "meaning": "n. 化合物；复合物；adj. 复合的；v. 使恶化；混合",
+    "phrases": [
+      { "text": "organic compound", "important": true },
+      { "text": "compound interest 复利", "important": true },
+      { "text": "compound sentence", "important": true },
+      { "text": "compound difficulties / risks / stress", "important": true }
+    ],
+    "examples": [],
+    "notes": "名词/形容词读 /ˈkɒmpaʊnd/，动词读 /kəmˈpaʊnd/。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["mixture", "worsen", "intensify"],
+      "derivatives": ["composition", "compose"],
+      "confusable": ["complex", "comprehend"],
+      "roots": ["com- (together, 一起)", "-pound- (put, 放置)"]
+    }
+  },
+  {
+    "id": "tulip",
+    "word": "tulip",
+    "meaning": "n. 郁金香",
+    "phrases": [],
+    "examples": [],
+    "notes": "来自土耳其语 tulbend，经由荷兰传入英语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": [],
+      "confusable": ["turnip"],
+      "roots": []
+    }
+  },
+  {
+    "id": "staple",
+    "word": "staple",
+    "meaning": "n. 主食；主要产品；adj. 主要的；vt. 用订书钉订",
+    "phrases": [
+      { "text": "staple food 主食", "important": true },
+      { "text": "staple industry 支柱产业", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；作形容词“主要的”很常见。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["main", "basic", "essential"],
+      "derivatives": ["stapler"],
+      "confusable": ["stable"],
+      "roots": []
+    }
+  },
+  {
+    "id": "fiber",
+    "word": "fiber",
+    "meaning": "n. 纤维；品质",
+    "phrases": [
+      { "text": "moral / inner fiber 道德品格/内在风骨", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；英式拼写 fibre。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["thread", "texture", "character"],
+      "derivatives": ["fibrous"],
+      "confusable": ["fibre"],
+      "roots": []
+    }
+  },
+  {
+    "id": "adolescence",
+    "word": "adolescence",
+    "meaning": "n. 青春期",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 adolescent；注意与 adolescent（青少年）区分。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["puberty", "youth"],
+      "derivatives": ["adolescent"],
+      "confusable": ["adolescent"],
+      "roots": ["-olesc- (grow, 成长)"]
+    }
+  },
+  {
+    "id": "scent",
+    "word": "scent",
+    "meaning": "n. 气味；香味；v. 嗅出",
+    "phrases": [
+      { "text": "scent out 嗅出；察觉（线索、机遇等）", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["fragrance", "smell", "sniff"],
+      "derivatives": ["scented", "scentless"],
+      "confusable": ["cent", "sent"],
+      "roots": ["-sent- (feel, 感觉)"]
+    }
+  },
+  {
+    "id": "consist",
+    "word": "consist",
+    "meaning": "v. 由……组成；在于",
+    "phrases": [
+      { "text": "consist of 由……组成", "important": true },
+      { "text": "consist in 在于；存在于", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；consist of 无被动语态。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["compose", "comprise", "lie in"],
+      "derivatives": ["consistent", "consistency"],
+      "confusable": ["insist", "persist"],
+      "roots": ["con- (together, 一起)", "-sist- (stand, 站立)"]
+    }
+  },
+  {
+    "id": "cocoon",
+    "word": "cocoon",
+    "meaning": "n. 茧；v. 包裹",
+    "phrases": [
+      { "text": "cocoon oneself in 做茧自缚于……", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["wrap", "enclose", "shield"],
+      "derivatives": [],
+      "confusable": ["cocoa", "racoon"],
+      "roots": []
+    }
+  },
+  {
+    "id": "altruism",
+    "word": "altruism",
+    "meaning": "n. 利他主义",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 altruistic；反义词 egoism。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["selflessness", "benevolence"],
+      "derivatives": ["altruistic", "altruist"],
+      "confusable": ["alter", "alternative"],
+      "roots": ["alter- (other, 其他)"]
+    }
+  },
+  {
+    "id": "caption",
+    "word": "caption",
+    "meaning": "n. 说明文字；字幕",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 closed caption（隐藏式字幕）。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["subtitle", "headline", "title"],
+      "derivatives": ["captioned"],
+      "confusable": ["capture"],
+      "roots": ["-capt- (take, 拿)"]
+    }
+  },
+  {
+    "id": "sprout",
+    "word": "sprout",
+    "meaning": "v./n. 发芽；嫩芽",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 Brussels sprout 球芽甘蓝。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["germinate", "bud", "shoot"],
+      "derivatives": ["sprouting"],
+      "confusable": ["spout", "shout"],
+      "roots": []
+    }
+  },
+  {
+    "id": "toss",
+    "word": "toss",
+    "meaning": "v./n. 扔；抛；辗转",
+    "phrases": [
+      { "text": "toss and turn 辗转反侧", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["throw", "flip", "cast"],
+      "derivatives": ["tossing"],
+      "confusable": ["boss", "loss"],
+      "roots": []
+    }
+  },
+  {
+    "id": "chili",
+    "word": "chili",
+    "meaning": "n. 辣椒",
+    "phrases": [],
+    "examples": [],
+    "notes": "也可拼作 chilli（英式）或 chile。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["pepper", "capsicum"],
+      "derivatives": [],
+      "confusable": ["chilly", "chill"],
+      "roots": []
+    }
+  },
+  {
+    "id": "blemish",
+    "word": "blemish",
+    "meaning": "n. 瑕疵；污点；v. 玷污",
+    "phrases": [
+      { "text": "a blemish on ……的污点", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["flaw", "defect", "stain"],
+      "derivatives": ["blemished", "unblemished"],
+      "confusable": ["blush"],
+      "roots": []
+    }
+  },
+  {
+    "id": "cringe",
+    "word": "cringe",
+    "meaning": "v. 畏缩；讨好",
+    "phrases": [
+      { "text": "cringe away from 退缩躲避", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["cower", "flinch", "recoil"],
+      "derivatives": ["cringeworthy"],
+      "confusable": ["fringe"],
+      "roots": []
+    }
+  },
+  {
+    "id": "penicillin",
+    "word": "penicillin",
+    "meaning": "n. 青霉素",
+    "phrases": [],
+    "examples": [],
+    "notes": "抗生素类药物，来自 Penicillium 霉菌。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["antibiotic"],
+      "derivatives": [],
+      "confusable": ["pencil"],
+      "roots": ["-cill- (small hair, 小毛)"]
+    }
+  },
+  {
+    "id": "regurgitate",
+    "word": "regurgitate",
+    "meaning": "v. 反刍；机械重复",
+    "phrases": [],
+    "examples": [],
+    "notes": "常带贬义，指不加思考地重复。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["repeat", "vomit", "echo"],
+      "derivatives": ["regurgitation"],
+      "confusable": ["resurgence"],
+      "roots": ["re- (back, 回)", "-gurg- (throat, 喉咙)"]
+    }
+  },
+  {
+    "id": "clamp",
+    "word": "clamp",
+    "meaning": "n./v. 夹子；夹紧",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 clamp down on 严厉打击。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["grip", "fasten", "press"],
+      "derivatives": ["clamper"],
+      "confusable": ["clap", "cramp"],
+      "roots": []
+    }
+  },
+  {
+    "id": "spine",
+    "word": "spine",
+    "meaning": "n. 脊柱；刺",
+    "phrases": [],
+    "examples": [],
+    "notes": "书的 spine 指书脊。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["backbone", "thorn"],
+      "derivatives": ["spinal", "spiny"],
+      "confusable": ["spice", "spite"],
+      "roots": []
+    }
+  },
+  {
+    "id": "pithy",
+    "word": "pithy",
+    "meaning": "adj. 简洁有力的；精辟的",
+    "phrases": [],
+    "examples": [],
+    "notes": "常形容评论、表述等。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["concise", "terse", "succinct"],
+      "derivatives": ["pith", "pithiness"],
+      "confusable": ["pitchy", "pathy"],
+      "roots": []
+    }
+  },
+  {
+    "id": "hatch",
+    "word": "hatch",
+    "meaning": "v./n. 孵化；舱口",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 hatch a plan 策划。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["incubate", "breed", "open"],
+      "derivatives": ["hatchery", "hatchling"],
+      "confusable": ["catch", "hatchet"],
+      "roots": []
+    }
+  }
+]
+;
+
+        const STORAGE_KEY = 'vocab_words';
+        const messageEl = document.getElementById('message');
+        const importBtn = document.getElementById('import-btn');
+
+        function showMessage(text, isError) {
+            messageEl.textContent = text;
+            messageEl.className = 'message ' + (isError ? 'error' : 'success');
+            messageEl.style.display = 'block';
+        }
+
+        importBtn.addEventListener('click', function () {
+            try {
+                const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                const existingIds = new Set(existing.map(w => w.id));
+                let added = 0;
+                let skipped = 0;
+
+                BATCH_DATA.forEach(word => {
+                    if (existingIds.has(word.id)) {
+                        skipped++;
+                    } else {
+                        existing.push(word);
+                        existingIds.add(word.id);
+                        added++;
+                    }
+                });
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+
+                showMessage(
+                    `第 3 天导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。`,
+                    false
+                );
+
+                const details = document.createElement('div');
+                details.className = 'details';
+                details.innerHTML = `
+                    现在可以 <a href="index.html">打开词汇随记</a> 查看。<br>
+                    当前本地共有 ${existing.length} 个单词。
+                `;
+                messageEl.appendChild(details);
+            } catch (err) {
+                showMessage('导入失败：' + err.message, true);
+            }
+        });
+    </script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>

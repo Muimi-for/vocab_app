@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 词组复习</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>词组复习</h1>
+            <p>见到单词，立刻回想重点词组 / 短语</p>
+        </header>
+
+        <section class="card" id="review-container">
+            <div class="review-progress">
+                <span id="progress-text">第 1 / 10 个</span>
+            </div>
+
+            <div class="review-card" id="review-card">
+                <div class="card-front" id="card-front">
+                    <div class="card-label">单词</div>
+                    <h2 class="review-word" id="review-word">word</h2>
+                    <p class="review-hint">请回想这个单词的重点词组 / 短语</p>
+                </div>
+                <div class="card-back" id="card-back" style="display: none;">
+                    <div class="card-label">重点词组 / 短语</div>
+                    <div id="phrase-answer"></div>
+                    <div class="phrase-meaning" id="phrase-meaning"></div>
+                    <div id="phrase-details"></div>
+                </div>
+            </div>
+
+            <div class="review-actions" id="review-actions">
+                <button id="flip-btn" class="flip-btn">查看词组</button>
+            </div>
+
+            <div class="rating-actions" id="rating-actions" style="display: none;">
+                <button class="rate-btn again" data-rating="again">没想起</button>
+                <button class="rate-btn hard" data-rating="hard">想起部分</button>
+                <button class="rate-btn good" data-rating="good">全想起</button>
+            </div>
+        </section>
+
+        <section class="card" id="completion-message" style="display: none;">
+            <h2>🎉 词组复习完成</h2>
+            <p id="completion-text"></p>
+            <a href="index.html" class="review-btn">返回首页</a>
+        </section>
+    </div>
+
+    <script src="review-phrases.js"></script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>
