@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 词汇星图</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="network.css">
+    <script src="lib/d3.v7.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>词汇星图</h1>
+            <p>在词汇的星空中，看见词与词之间的光轨</p>
+        </header>
+
+        <section class="card controls">
+            <div class="control-group">
+                <span class="control-label">关系类型：</span>
+                <label><input type="checkbox" class="relation-filter" value="synonyms" checked> 近义词</label>
+                <label><input type="checkbox" class="relation-filter" value="antonyms" checked> 反义词</label>
+                <label><input type="checkbox" class="relation-filter" value="derivatives" checked> 派生词</label>
+                <label><input type="checkbox" class="relation-filter" value="confusable" checked> 易混词</label>
+                <label><input type="checkbox" class="relation-filter" value="roots" checked> 同根 / 同源</label>
+            </div>
+            <div class="control-group">
+                <span class="control-label">显示范围：</span>
+                <label><input type="radio" name="scope" value="all" checked> 全部</label>
+                <label><input type="radio" name="scope" value="important"> 重点词</label>
+            </div>
+            <div class="legend">
+                <span class="legend-item"><span class="dot important"></span> 重点词</span>
+                <span class="legend-item"><span class="dot normal"></span> 非重点词</span>
+                <span class="legend-item"><span class="dot root"></span> 词根</span>
+            </div>
+        </section>
+
+        <section class="card graph-container">
+            <div id="graph"></div>
+            <div id="node-details" class="node-details">
+                <p class="empty-tip">点击节点查看单词详情</p>
+            </div>
+        </section>
+
+        <div class="back-link">
+            <a href="index.html">← 返回首页</a>
+        </div>
+    </div>
+
+    <script src="network.js"></script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>

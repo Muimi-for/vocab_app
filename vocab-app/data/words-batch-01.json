@@ -1,0 +1,566 @@
+[
+  {
+    "id": "betray",
+    "word": "betray",
+    "meaning": "vt. 背叛；辜负；泄露",
+    "phrases": [
+      { "text": "betray sb. / betray one's country / betray one's principles", "important": true },
+      { "text": "betray one's expectation", "important": true },
+      { "text": "betray a secret / emotion", "important": true }
+    ],
+    "examples": ["He felt betrayed when his friend revealed his secrets."],
+    "notes": "过去式/过去分词：betrayed；形容词：betrayed（感到被背叛的）。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["deceive", "reveal"],
+      "derivatives": ["betrayal", "betrayer", "betrayed"],
+      "confusable": ["portray"],
+      "roots": ["-tray- (hand over, 交付)"]
+    }
+  },
+  {
+    "id": "consolidate",
+    "word": "consolidate",
+    "meaning": "v. （使）巩固；整合",
+    "phrases": [
+      { "text": "consolidate confidence / position / achievements", "important": true }
+    ],
+    "examples": ["Students need time to consolidate what they have learned."],
+    "notes": "常作及物动词；名词 consolidation 也很常用。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["strengthen", "integrate", "solidify"],
+      "derivatives": ["consolidation", "consolidator"],
+      "confusable": [],
+      "roots": ["-solid- (solid, 坚固的)"]
+    }
+  },
+  {
+    "id": "navigate",
+    "word": "navigate",
+    "meaning": "v. 导航；浏览（网页等）；艰难应对",
+    "phrases": [
+      { "text": "navigate a road / navigate by GPS", "important": true },
+      { "text": "navigate a website", "important": true },
+      { "text": "navigate one's way through / navigate complex problems", "important": true }
+    ],
+    "examples": ["He navigated his way through the tough period."],
+    "notes": "引申义“艰难应对”是重点，常考。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["steer", "maneuver"],
+      "derivatives": ["navigation", "navigator", "navigable"],
+      "confusable": [],
+      "roots": ["-nav- (ship, 船)"]
+    }
+  },
+  {
+    "id": "bolster",
+    "word": "bolster",
+    "meaning": "v. 提振；巩固；佐证",
+    "phrases": [
+      { "text": "bolster confidence / spirits", "important": true },
+      { "text": "bolster one's position", "important": true },
+      { "text": "bolster an argument / evidence", "important": true },
+      { "text": "bolster sb. in sth. 在某方面支持某人", "important": true }
+    ],
+    "examples": ["Measures should be taken to bolster public confidence."],
+    "notes": "link: consolidate。多接抽象名词（confidence, position, argument）。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["boost", "strengthen", "support"],
+      "derivatives": ["bolsterer"],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "proficient",
+    "word": "proficient",
+    "meaning": "adj. 精通的",
+    "phrases": [
+      { "text": "be proficient in / at sth. / doing sth.", "important": true }
+    ],
+    "examples": ["She is proficient in computer skills."],
+    "notes": "注意介词搭配：in / at。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["skilled", "adept", "competent"],
+      "derivatives": ["proficiency"],
+      "confusable": ["efficient", "sufficient"],
+      "roots": ["-fic- (do/make, 做)"]
+    }
+  },
+  {
+    "id": "deficiency",
+    "word": "deficiency",
+    "meaning": "n. （可数或不可数）不足；缺陷",
+    "phrases": [
+      { "text": "vitamin / nutritional deficiency", "important": true },
+      { "text": "deficiencies in skills / correct deficiency / serious deficiency", "important": true }
+    ],
+    "examples": ["We need to make up for our deficiencies in practical skills."],
+    "notes": "常与 in 搭配；形容词 deficient 也是重点。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["flaw", "shortage", "lack"],
+      "derivatives": ["deficient"],
+      "confusable": ["efficiency", "sufficiency"],
+      "roots": ["-fic- (do/make, 做)", "de- (away, 离开)"]
+    }
+  },
+  {
+    "id": "spoil",
+    "word": "spoil",
+    "meaning": "v. 破坏；溺爱",
+    "phrases": [
+      { "text": "spoil the atmosphere / spoil one's pleasure", "important": true },
+      { "text": "be spoilt for choice 选择太多而挑花眼", "important": true }
+    ],
+    "examples": ["Uncivilized behaviors will spoil the public atmosphere."],
+    "notes": "过去式/过去分词：spoiled / spoilt 两种形式均可；现在分词 spoiling。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["ruin", "damage"],
+      "derivatives": ["spoiler", "spoiled", "spoilt"],
+      "confusable": ["soil", "boil"],
+      "roots": []
+    }
+  },
+  {
+    "id": "adequate",
+    "word": "adequate",
+    "meaning": "adj. 足够的；恰当的",
+    "phrases": [
+      { "text": "adequate funds / time / resources / adequate preparation / evidence", "important": true },
+      { "text": "adequate for sth. 足以满足；适合", "important": true },
+      { "text": "adequate to sth. / to do sth. 足以胜任", "important": true }
+    ],
+    "examples": ["We should make adequate preparation before exams."],
+    "notes": "反义词 inadequate 更常考；名词 adequacy。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["sufficient", "enough"],
+      "derivatives": ["adequacy", "adequately", "inadequate"],
+      "confusable": ["equal"],
+      "roots": ["-equ- (equal, 相等)"]
+    }
+  },
+  {
+    "id": "objectionable",
+    "word": "objectionable",
+    "meaning": "adj. 令人反感的；讨厌的",
+    "phrases": [],
+    "examples": [],
+    "notes": "由 objection（反对）+ -able 构成。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["offensive", "unpleasant"],
+      "derivatives": ["objection", "object", "objective"],
+      "confusable": [],
+      "roots": ["-ject- (throw, 投掷)"]
+    }
+  },
+  {
+    "id": "slovenliness",
+    "word": "slovenliness",
+    "meaning": "n. 邋遢；马虎",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 slovenly，指人邋遢或工作马虎。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["sloppiness", "carelessness"],
+      "derivatives": ["slovenly", "sloven"],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "traitor",
+    "word": "traitor",
+    "meaning": "n. 叛徒；卖国贼",
+    "phrases": [],
+    "examples": [],
+    "notes": "与 betray 同根；注意拼写 -ai-。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["betrayer"],
+      "derivatives": ["treason", "betray"],
+      "confusable": ["trailor（误拼）"],
+      "roots": ["-trad- / -tray- (hand over, 交付)"]
+    }
+  },
+  {
+    "id": "steer",
+    "word": "steer",
+    "meaning": "v. 驾驶；引导",
+    "phrases": [],
+    "examples": [],
+    "notes": "steer clear of 避开，也是常见短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["navigate", "guide", "drive"],
+      "derivatives": ["steering", "steerage"],
+      "confusable": ["steed", "steel"],
+      "roots": []
+    }
+  },
+  {
+    "id": "premium",
+    "word": "premium",
+    "meaning": "n. 保险费；额外费用；adj. 优质的；高昂的",
+    "phrases": [
+      { "text": "place / put a premium on 重视", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["bonus", "extra"],
+      "derivatives": [],
+      "confusable": ["premier"],
+      "roots": ["-prem- (before, 前)"]
+    }
+  },
+  {
+    "id": "extracurricular",
+    "word": "extracurricular",
+    "meaning": "adj. 课外的",
+    "phrases": [
+      { "text": "participate in extracurricular activities 参加课外活动", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["after-school"],
+      "derivatives": ["curriculum", "curricular"],
+      "confusable": [],
+      "roots": ["-curr- (run, 跑)", "extra- (outside, 外)"]
+    }
+  },
+  {
+    "id": "merit",
+    "word": "merit",
+    "meaning": "n. 优点；价值；v. 值得",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 merit attention / consideration 值得关注。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["virtue", "worth"],
+      "derivatives": ["meritorious", "demerit"],
+      "confusable": ["marry"],
+      "roots": []
+    }
+  },
+  {
+    "id": "shackles",
+    "word": "shackles",
+    "meaning": "n. 镣铐；束缚",
+    "phrases": [
+      { "text": "break the shackles of 打破……的束缚", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。常用复数。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["chains", "restraints"],
+      "derivatives": ["shackle"],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "bullseye",
+    "word": "bullseye",
+    "meaning": "n. 靶心；中心",
+    "phrases": [
+      { "text": "hit the bullseye 一语中的；大获成功", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["target", "goal"],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "assessment",
+    "word": "assessment",
+    "meaning": "n. 评估；评定",
+    "phrases": [],
+    "examples": [],
+    "notes": "动词 assess；常见搭配 risk assessment。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["evaluation", "appraisal"],
+      "derivatives": ["assess", "assessable"],
+      "confusable": ["access", "asset"],
+      "roots": ["-sess- (sit, 坐)"]
+    }
+  },
+  {
+    "id": "matcha",
+    "word": "matcha",
+    "meaning": "n. 抹茶",
+    "phrases": [],
+    "examples": [],
+    "notes": "来自日语，外来词。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": [],
+      "confusable": ["match"],
+      "roots": []
+    }
+  },
+  {
+    "id": "powder",
+    "word": "powder",
+    "meaning": "n. 粉末；火药",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 milk powder、gun powder。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["dust", "flour"],
+      "derivatives": ["powdery"],
+      "confusable": ["power"],
+      "roots": []
+    }
+  },
+  {
+    "id": "antioxidant",
+    "word": "antioxidant",
+    "meaning": "n. 抗氧化剂",
+    "phrases": [],
+    "examples": [],
+    "notes": "anti-（抗）+ oxidant（氧化剂）。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": ["oxidant", "oxidize", "oxide"],
+      "confusable": [],
+      "roots": ["anti- (against, 抗)", "-ox- (oxygen, 氧)"]
+    }
+  },
+  {
+    "id": "duster",
+    "word": "duster",
+    "meaning": "n. 除尘器；掸子",
+    "phrases": [],
+    "examples": [],
+    "notes": "来自 dust（灰尘）+ -er。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["cloth", "wiper"],
+      "derivatives": ["dust", "dusty"],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "bump",
+    "word": "bump",
+    "meaning": "v./n. 碰撞；肿块",
+    "phrases": [
+      { "text": "bump up 提高", "important": true },
+      { "text": "bump into 偶遇", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。bump into 既指“撞上”，也指“偶遇”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["collide", "hit"],
+      "derivatives": ["bumper", "bumpy"],
+      "confusable": ["dump", "pump"],
+      "roots": []
+    }
+  },
+  {
+    "id": "requisition",
+    "word": "requisition",
+    "meaning": "n./v. 征用；申请",
+    "phrases": [],
+    "examples": [],
+    "notes": "较正式；动词 requisition supplies 征用物资。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["request", "demand"],
+      "derivatives": ["requisite", "prerequisite"],
+      "confusable": ["acquisition"],
+      "roots": ["-quisit- (seek/ask, 寻求)"]
+    }
+  },
+  {
+    "id": "mayor",
+    "word": "mayor",
+    "meaning": "n. 市长",
+    "phrases": [],
+    "examples": [],
+    "notes": "注意发音 /meə(r)/，与 major 区分。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": ["mayoral", "mayoralty"],
+      "confusable": ["major"],
+      "roots": []
+    }
+  },
+  {
+    "id": "rugged",
+    "word": "rugged",
+    "meaning": "adj. 崎岖的；坚固的；粗犷的",
+    "phrases": [],
+    "examples": [],
+    "notes": "可形容地形、设备或人的外貌。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["rough", "sturdy", "tough"],
+      "derivatives": ["ruggedness"],
+      "confusable": ["ragged"],
+      "roots": []
+    }
+  },
+  {
+    "id": "turbine",
+    "word": "turbine",
+    "meaning": "n. 涡轮机",
+    "phrases": [],
+    "examples": [],
+    "notes": "wind turbine 风力涡轮机；gas turbine 燃气轮机。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": ["turbojet", "turbocharger"],
+      "confusable": ["turbulence"],
+      "roots": ["-turb- (disturb/whirl, 搅动)"]
+    }
+  },
+  {
+    "id": "subsidy",
+    "word": "subsidy",
+    "meaning": "n. 补贴；补助金",
+    "phrases": [
+      { "text": "grant / provide subsidies 给予补贴", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。动词 subsidize。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["allowance", "grant"],
+      "derivatives": ["subsidize", "subsidized"],
+      "confusable": ["subordinate"],
+      "roots": ["sub- (under, 下)", "-sid- (sit, 坐)"]
+    }
+  },
+  {
+    "id": "cluster",
+    "word": "cluster",
+    "meaning": "n. 簇；群；v. 聚集",
+    "phrases": [
+      { "text": "a cluster of 一簇；一群", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 中的短语 headword，作为补充词条录入。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["group", "bunch"],
+      "derivatives": [],
+      "confusable": ["clutter"],
+      "roots": []
+    }
+  }
+]

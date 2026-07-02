@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 导入第 2 天</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        h1 { margin: 0 0 10px; color: #4f46e5; }
+        p { color: #6b7280; }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled { background: #9ca3af; cursor: not-allowed; }
+        .message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+        .success { background: #d1fae5; color: #065f46; }
+        .error { background: #fee2e2; color: #991b1b; }
+        .details { margin-top: 12px; font-size: 0.9rem; }
+    </style>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>导入第 2 天词汇</h1>
+            <p>将第 2 天的 28 个单词（8 重点 + 20 非重点）导入到「词汇随记」。</p>
+            <button id="import-btn">立即导入</button>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        const BATCH_DATA = 
+[
+  {
+    "id": "stroke",
+    "word": "stroke",
+    "meaning": "n. 中风；笔触；钟鸣；(成功的)举动；vt. 抚摸",
+    "phrases": [
+      { "text": "suffer a stroke", "important": true },
+      { "text": "on the stroke of midnight", "important": true },
+      { "text": "stroke a cat / sb's hair", "important": true },
+      { "text": "a stroke of genius 神来之笔", "important": true },
+      { "text": "a stroke of luck 突如其来的好运", "important": true }
+    ],
+    "examples": ["She stroked the baby's cheek gently."],
+    "notes": "一词多义：既有疾病含义，也有“抚摸”和“灵感一击”的引申义。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["blow", "pat", "caress"],
+      "derivatives": ["stroking"],
+      "confusable": ["strike"],
+      "roots": []
+    }
+  },
+  {
+    "id": "scenario",
+    "word": "scenario",
+    "meaning": "n. (计划或预测的)情景；一连串的事件",
+    "phrases": [
+      { "text": "worst-case scenario", "important": true },
+      { "text": "evaluate various scenarios / realistic scenario", "important": true }
+    ],
+    "examples": ["We must consider all possible scenarios before implementing the reform."],
+    "notes": "你手写时拼作 senario，标准拼写为 scenario。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["situation", "scene", "plot"],
+      "derivatives": ["scenarist"],
+      "confusable": ["scene"],
+      "roots": ["-scen- (scene, 场景)"]
+    }
+  },
+  {
+    "id": "retrieve",
+    "word": "retrieve",
+    "meaning": "v. 找回；检索；挽回",
+    "phrases": [
+      { "text": "retrieve sth. from", "important": true },
+      { "text": "retrieve data / files / information", "important": true },
+      { "text": "retrieve one's reputation / retrieve a loss / retrieve the situation", "important": true },
+      { "text": "retrieve oneself 改过自新", "important": true }
+    ],
+    "examples": ["He tried hard to retrieve the awkward situation."],
+    "notes": "计算机语境中常作“检索”；正式语境中可表“挽回局面”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["recover", "regain", "restore"],
+      "derivatives": ["retrieval", "retrievable"],
+      "confusable": ["achieve"],
+      "roots": ["re- (back, 回)", "-trieve- (find, 找到)"]
+    }
+  },
+  {
+    "id": "logistics",
+    "word": "logistics",
+    "meaning": "n. 物流；后勤",
+    "phrases": [
+      { "text": "logistics industry / international logistics / supply chain logistics", "important": true }
+    ],
+    "examples": ["We need to work out the logistics of the conference first."],
+    "notes": "单复数同形；形容词 logistical。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["organization", "planning"],
+      "derivatives": ["logistical", "logistician"],
+      "confusable": ["logic"],
+      "roots": ["-log- (reason/speech, 理性/言语)"]
+    }
+  },
+  {
+    "id": "designate",
+    "word": "designate",
+    "meaning": "v. 划定；任命；命名",
+    "phrases": [
+      { "text": "designate sth. (as) sth. / designate sp. for", "important": true },
+      { "text": "designate sb. (as) sth. / designate sb. to do", "important": true }
+    ],
+    "examples": ["This area is designated as a parking lot. (被动语态极常用)"],
+    "notes": "被动语态 be designated as 非常常见，考试高频。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["appoint", "name", "assign"],
+      "derivatives": ["designation", "designer", "design"],
+      "confusable": [],
+      "roots": ["-sign- (mark, 标记)"]
+    }
+  },
+  {
+    "id": "tender",
+    "word": "tender",
+    "meaning": "adj. 温柔的；柔软的；敏感的；v. 提交；投标；n. 投标",
+    "phrases": [
+      { "text": "tender loving care (TLC) / tender smile / voice", "important": true },
+      { "text": "tender situation / topic", "important": true },
+      { "text": "tender one's apologies 正式致歉", "important": true },
+      { "text": "tender sth. to sb.", "important": true },
+      { "text": "legal tender 法定货币", "important": true }
+    ],
+    "examples": ["The steak is tender and delicious."],
+    "notes": "一词三性，商务语境中常作“投标”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["gentle", "soft", "sore"],
+      "derivatives": ["tenderness", "tenderly"],
+      "confusable": ["tend"],
+      "roots": ["-tend- (stretch, 伸展)"]
+    }
+  },
+  {
+    "id": "incisive",
+    "word": "incisive",
+    "meaning": "adj. 精辟的，一针见血的；锋利的",
+    "phrases": [
+      { "text": "incisive mind / questions / analysis / comments / insight", "important": true }
+    ],
+    "examples": ["We need an incisive judgement to deal with this complicated matter."],
+    "notes": "词根 cis 表“切”，引申为“切中要害”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["sharp", "acute", "penetrating"],
+      "derivatives": ["incise", "incision"],
+      "confusable": ["decisive"],
+      "roots": ["-cis- (cut, 切)"]
+    }
+  },
+  {
+    "id": "fluctuation",
+    "word": "fluctuation",
+    "meaning": "n. 起伏",
+    "phrases": [
+      { "text": "price fluctuation / temperature fluctuation / economic fluctuation", "important": true },
+      { "text": "fluctuation in sth.", "important": true }
+    ],
+    "examples": ["There are constant fluctuations in the market price."],
+    "notes": "常作不可数或可数；动词 fluctuate 常与 between 搭配。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["variation", "instability", "swing"],
+      "derivatives": ["fluctuate"],
+      "confusable": ["fluency"],
+      "roots": ["-fluct- (flow/wave, 流动/波浪)"]
+    }
+  },
+  {
+    "id": "edible",
+    "word": "edible",
+    "meaning": "adj. 可食用的",
+    "phrases": [],
+    "examples": [],
+    "notes": "反义词 inedible。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["eatable"],
+      "derivatives": ["edibility", "inedible"],
+      "confusable": ["eligible"],
+      "roots": ["-ed- (eat, 吃)"]
+    }
+  },
+  {
+    "id": "refrigerator",
+    "word": "refrigerator",
+    "meaning": "n. 冰箱",
+    "phrases": [],
+    "examples": [],
+    "notes": "口语常简称为 fridge。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["fridge"],
+      "derivatives": ["refrigerate", "refrigeration"],
+      "confusable": [],
+      "roots": ["re- (again)", "-friger- (cold, 冷)"]
+    }
+  },
+  {
+    "id": "bacteria",
+    "word": "bacteria",
+    "meaning": "n. 细菌",
+    "phrases": [],
+    "examples": [],
+    "notes": "复数形式；单数 bacterium。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["germ", "microbe"],
+      "derivatives": ["bacterial", "bacterium"],
+      "confusable": ["bakery"],
+      "roots": []
+    }
+  },
+  {
+    "id": "ponder",
+    "word": "ponder",
+    "meaning": "v. 沉思，考虑",
+    "phrases": [
+      { "text": "ponder over/on 考虑；沉思", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；常与 on/over 搭配。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["consider", "contemplate", "meditate"],
+      "derivatives": ["ponderous", "ponderously"],
+      "confusable": ["wander", "wonder"],
+      "roots": ["-pond- (weigh, 衡量)"]
+    }
+  },
+  {
+    "id": "cozy",
+    "word": "cozy",
+    "meaning": "adj. 舒适的，温馨的",
+    "phrases": [],
+    "examples": [],
+    "notes": "英式拼写 cosy。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["comfortable", "snug"],
+      "derivatives": ["coziness"],
+      "confusable": ["lazy", "cosy"],
+      "roots": []
+    }
+  },
+  {
+    "id": "dwelling",
+    "word": "dwelling",
+    "meaning": "n. 住宅，住所",
+    "phrases": [
+      { "text": "dwell on 老是想着，沉湎于", "important": true },
+      { "text": "dwell in 居住于；存在于", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；dwell 本身也作动词“居住/沉湎”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["residence", "housing"],
+      "derivatives": ["dwell", "dweller"],
+      "confusable": ["swelling"],
+      "roots": []
+    }
+  },
+  {
+    "id": "dwell",
+    "word": "dwell",
+    "meaning": "v. 居住；老是想着",
+    "phrases": [
+      { "text": "dwell on 老是想着，沉湎于", "important": true },
+      { "text": "dwell in 居住于；存在于", "important": true }
+    ],
+    "examples": [],
+    "notes": "与 dwelling 同根；dwell on 是高频短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["live", "reside", "linger"],
+      "derivatives": ["dwelling", "dweller"],
+      "confusable": ["swell"],
+      "roots": []
+    }
+  },
+  {
+    "id": "settlement",
+    "word": "settlement",
+    "meaning": "n. 定居点；解决；协议",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 reach a settlement 达成和解。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["agreement", "resolution", "colony"],
+      "derivatives": ["settle", "settler"],
+      "confusable": [],
+      "roots": ["-set- (sit, 坐/安放)"]
+    }
+  },
+  {
+    "id": "novelty",
+    "word": "novelty",
+    "meaning": "n. 新奇；新奇事物",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 novel 作“新奇的”，也可作名词“小说”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["newness", "originality"],
+      "derivatives": ["novel", "novelist"],
+      "confusable": ["nobility"],
+      "roots": ["-nov- (new, 新)"]
+    }
+  },
+  {
+    "id": "photosynthesis",
+    "word": "photosynthesis",
+    "meaning": "n. 光合作用",
+    "phrases": [],
+    "examples": [],
+    "notes": "你手写为 photosynthese，标准拼写为 photosynthesis。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": ["photosynthetic"],
+      "confusable": ["photosynthese"],
+      "roots": ["photo- (light, 光)", "-syn- (together, 共同)", "-thes- (put, 放置)"]
+    }
+  },
+  {
+    "id": "waxy",
+    "word": "waxy",
+    "meaning": "adj. 蜡质的",
+    "phrases": [],
+    "examples": [],
+    "notes": "来自 wax（蜡）+ -y。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["waxen"],
+      "derivatives": ["wax", "waxiness"],
+      "confusable": ["wavy"],
+      "roots": []
+    }
+  },
+  {
+    "id": "tissue",
+    "word": "tissue",
+    "meaning": "n. 组织；纸巾；薄纸",
+    "phrases": [],
+    "examples": [],
+    "notes": "生物学“组织”与日常“纸巾”同形。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["paper", "fabric"],
+      "derivatives": [],
+      "confusable": ["issue"],
+      "roots": []
+    }
+  },
+  {
+    "id": "prey",
+    "word": "prey",
+    "meaning": "n./v. 猎物；捕食",
+    "phrases": [],
+    "examples": [],
+    "notes": "常见搭配 prey on 捕食；欺骗/折磨。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["victim", "hunt"],
+      "derivatives": ["predator", "predatory"],
+      "confusable": ["pray", "play"],
+      "roots": []
+    }
+  },
+  {
+    "id": "tiresome",
+    "word": "tiresome",
+    "meaning": "adj. 令人厌烦的",
+    "phrases": [],
+    "examples": [],
+    "notes": "主语通常是事物，不是人。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["boring", "tedious", "annoying"],
+      "derivatives": ["tire", "tired", "tiring"],
+      "confusable": ["tireless"],
+      "roots": []
+    }
+  },
+  {
+    "id": "primeval",
+    "word": "primeval",
+    "meaning": "adj. 原始的，远古的",
+    "phrases": [
+      { "text": "primeval forests 原始森林", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["primitive", "ancient"],
+      "derivatives": [],
+      "confusable": ["prime", "primary"],
+      "roots": ["prim- (first, 第一)"]
+    }
+  },
+  {
+    "id": "crust",
+    "word": "crust",
+    "meaning": "n. 外壳；地壳；面包皮",
+    "phrases": [],
+    "examples": [],
+    "notes": "the Earth's crust 地壳；pie crust 馅饼皮。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["shell", "coating"],
+      "derivatives": ["crusty", "crustacean"],
+      "confusable": ["trust", "crush"],
+      "roots": []
+    }
+  },
+  {
+    "id": "configuration",
+    "word": "configuration",
+    "meaning": "n. 配置；布局",
+    "phrases": [
+      { "text": "system configuration 系统配置", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；计算机常用词。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["arrangement", "layout", "setup"],
+      "derivatives": ["configure", "configurable"],
+      "confusable": ["confirmation"],
+      "roots": ["-figur- (shape, 形状)"]
+    }
+  },
+  {
+    "id": "midst",
+    "word": "midst",
+    "meaning": "n. 中间",
+    "phrases": [
+      { "text": "in the midst of 在……之中（强调混乱或繁忙）", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["middle", "center"],
+      "derivatives": ["amidst"],
+      "confusable": ["mist"],
+      "roots": ["mid- (middle, 中间)"]
+    }
+  },
+  {
+    "id": "deposit",
+    "word": "deposit",
+    "meaning": "n./v. 存款；沉积物；押金",
+    "phrases": [],
+    "examples": [],
+    "notes": "可指银行存款、租房押金或自然沉积物。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["payment", "sediment"],
+      "derivatives": ["depositor", "depository"],
+      "confusable": ["dispose"],
+      "roots": ["de- (down, 下)", "-posit- (put, 放)"]
+    }
+  },
+  {
+    "id": "beverage",
+    "word": "beverage",
+    "meaning": "n. 饮料",
+    "phrases": [],
+    "examples": [],
+    "notes": "正式用语，日常多作 drink。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["drink", "refreshment"],
+      "derivatives": [],
+      "confusable": ["average"],
+      "roots": []
+    }
+  }
+]
+;
+
+        const STORAGE_KEY = 'vocab_words';
+        const messageEl = document.getElementById('message');
+        const importBtn = document.getElementById('import-btn');
+
+        function showMessage(text, isError) {
+            messageEl.textContent = text;
+            messageEl.className = 'message ' + (isError ? 'error' : 'success');
+            messageEl.style.display = 'block';
+        }
+
+        importBtn.addEventListener('click', function () {
+            try {
+                const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                const existingIds = new Set(existing.map(w => w.id));
+                let added = 0;
+                let skipped = 0;
+
+                BATCH_DATA.forEach(word => {
+                    if (existingIds.has(word.id)) {
+                        skipped++;
+                    } else {
+                        existing.push(word);
+                        existingIds.add(word.id);
+                        added++;
+                    }
+                });
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+
+                showMessage(
+                    `第 2 天导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。`,
+                    false
+                );
+
+                const details = document.createElement('div');
+                details.className = 'details';
+                details.innerHTML = `
+                    现在可以 <a href="index.html">打开词汇随记</a> 查看。<br>
+                    当前本地共有 ${existing.length} 个单词。
+                `;
+                messageEl.appendChild(details);
+            } catch (err) {
+                showMessage('导入失败：' + err.message, true);
+            }
+        });
+    </script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+[
+  {
+    "id": "reap",
+    "word": "reap",
+    "meaning": "v. 收割（庄稼）；收获",
+    "phrases": [
+      { "text": "reap corn / wheat", "important": true },
+      { "text": "reap the fruits of sth. / reap rewards / reap what you sow / reap losses", "important": true }
+    ],
+    "examples": ["If you only seek short-term gains, you will eventually reap bitter consequences."],
+    "notes": "谚语 reap what you sow 种瓜得瓜，种豆得豆。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["harvest", "gain", "sow"],
+      "derivatives": ["reaper"],
+      "confusable": ["leap", "heap"],
+      "roots": []
+    }
+  },
+  {
+    "id": "impoverish",
+    "word": "impoverish",
+    "meaning": "v. 使贫穷；使枯竭",
+    "phrases": [
+      { "text": "impoverish local residents", "important": true },
+      { "text": "impoverish one's inner world / impoverish traditional culture", "important": true }
+    ],
+    "examples": ["Short-form video addiction impoverishes teenagers' ability of deep thinking."],
+    "notes": "常作及物动词；形容词 impoverished 也很常用。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["pauperize", "deplete", "drain"],
+      "derivatives": ["impoverished", "impoverishment"],
+      "confusable": ["improve"],
+      "roots": ["im- (in, 进入)", "-pover- (poor, 贫穷)"]
+    }
+  },
+  {
+    "id": "harness",
+    "word": "harness",
+    "meaning": "n. 马具；v. 驾驭；开发",
+    "phrases": [
+      { "text": "harness one's emotions / harness the power of will", "important": true },
+      { "text": "harness renewable energy / harness the potential of technology", "important": true }
+    ],
+    "examples": ["It takes maturity to harness your anger instead of losing your temper."],
+    "notes": "引申义“驾驭/开发（能量、情感、技术）”是重点。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["control", "utilize", "tap"],
+      "derivatives": ["harnessable"],
+      "confusable": ["harsh"],
+      "roots": []
+    }
+  },
+  {
+    "id": "confer",
+    "word": "confer",
+    "meaning": "v. 授予；磋商",
+    "phrases": [
+      { "text": "confer sth. on/upon sb. (正面赠予和反面伤害均可用)", "important": true },
+      { "text": "confer with sb.", "important": true }
+    ],
+    "examples": ["Reading confers profound insight on ordinary people."],
+    "notes": "confer with 表“磋商”；confer on 表“授予”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["grant", "bestow", "consult"],
+      "derivatives": ["conference", "conferment"],
+      "confusable": ["confess", "confirm"],
+      "roots": ["con- (together, 一起)", "-fer- (bring, 带)"]
+    }
+  },
+  {
+    "id": "scapegoat",
+    "word": "scapegoat",
+    "meaning": "n. 替罪羊；v. 让……背锅",
+    "phrases": [
+      { "text": "a scapegoat for sth. / make sb. a scapegoat", "important": true },
+      { "text": "scapegoat sb. (for sth.)", "important": true }
+    ],
+    "examples": ["Don't scapegoat ordinary citizens for systemic flaws."],
+    "notes": "可作动词，近年考试较常见。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["fall guy", "victim", "blame"],
+      "derivatives": ["scapegoating"],
+      "confusable": ["escape"],
+      "roots": []
+    }
+  },
+  {
+    "id": "ingratiate",
+    "word": "ingratiate",
+    "meaning": "v. 逢迎（含贬义，指刻意谄媚以换取好处）",
+    "phrases": [
+      { "text": "ingratiate oneself with sb. / ingratiate oneself into sb's favour", "important": true }
+    ],
+    "examples": ["She ingratiated herself into the teacher's favour with empty compliments."],
+    "notes": " oneself with 是固定搭配。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["flatter", "curry favor", "toady"],
+      "derivatives": ["ingratiation"],
+      "confusable": ["grateful", "ingrate"],
+      "roots": ["in- (into, 进入)", "-grat- (pleasing, 令人高兴的)"]
+    }
+  },
+  {
+    "id": "provoke",
+    "word": "provoke",
+    "meaning": "v. 挑衅；激起",
+    "phrases": [
+      { "text": "provoke sb. (into doing sth.)", "important": true },
+      { "text": "provoke heated debate / public outrage / wide concern", "important": true }
+    ],
+    "examples": ["The phenomenon has provoked heated discussion among the public."],
+    "notes": "provoke 后可接愤怒、讨论、关注等抽象名词。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["arouse", "trigger", "irritate"],
+      "derivatives": ["provocation", "provocative"],
+      "confusable": ["evoke", "invoke"],
+      "roots": ["pro- (forth, 向前)", "-vok- / -voc- (call, 呼唤)"]
+    }
+  },
+  {
+    "id": "lethal",
+    "word": "lethal",
+    "meaning": "adj. 致命的；极具破坏性的",
+    "phrases": [
+      { "text": "lethal weapon / poison / flaw / harm", "important": true }
+    ],
+    "examples": ["Unregulated online rumors exert a lethal influence on teenagers' values."],
+    "notes": "与 deadly 近义，可形容武器、伤害、影响等。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["deadly", "fatal", "mortal"],
+      "derivatives": ["lethality"],
+      "confusable": ["legal", "loyal"],
+      "roots": ["-leth- (death, 死)"]
+    }
+  },
+  {
+    "id": "nefarious",
+    "word": "nefarious",
+    "meaning": "adj. 邪恶的；不道德的",
+    "phrases": [],
+    "examples": [],
+    "notes": "较正式，常形容阴谋、活动等。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["wicked", "villainous", "evil"],
+      "derivatives": ["nefariously", "nefariousness"],
+      "confusable": ["notorious"],
+      "roots": ["ne- (not, 不)", "-fas- (divine law, 神法)"]
+    }
+  },
+  {
+    "id": "bait",
+    "word": "bait",
+    "meaning": "n./v. 诱饵；引诱",
+    "phrases": [
+      { "text": "take the bait 上当", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["lure", "tempt", "entice"],
+      "derivatives": ["baiting"],
+      "confusable": ["bite", "bit"],
+      "roots": []
+    }
+  },
+  {
+    "id": "swing",
+    "word": "swing",
+    "meaning": "v./n. 摇摆；秋千",
+    "phrases": [
+      { "text": "swing between A and B 在A与B之间摇摆不定", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；过去式/过去分词 swung。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["sway", "fluctuate", "oscillate"],
+      "derivatives": ["swinging"],
+      "confusable": ["swan", "swung"],
+      "roots": []
+    }
+  },
+  {
+    "id": "specimen",
+    "word": "specimen",
+    "meaning": "n. 标本；样本",
+    "phrases": [],
+    "examples": [],
+    "notes": "医学/生物学常用；也可幽默指“怪人”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["sample", "example", "instance"],
+      "derivatives": [],
+      "confusable": ["species", "specimen"],
+      "roots": ["-spec- (look, 看)"]
+    }
+  },
+  {
+    "id": "feces",
+    "word": "feces",
+    "meaning": "n. 粪便",
+    "phrases": [],
+    "examples": [],
+    "notes": "美式拼写；英式 faeces。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["excrement", "dung"],
+      "derivatives": ["fecal"],
+      "confusable": ["faces"],
+      "roots": []
+    }
+  },
+  {
+    "id": "burial",
+    "word": "burial",
+    "meaning": "n. 埋葬；葬礼",
+    "phrases": [],
+    "examples": [],
+    "notes": "动词 bury；常见搭配 burial ground 墓地。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["funeral", "interment"],
+      "derivatives": ["bury"],
+      "confusable": ["berry"],
+      "roots": []
+    }
+  },
+  {
+    "id": "livestock",
+    "word": "livestock",
+    "meaning": "n. 牲畜",
+    "phrases": [],
+    "examples": [],
+    "notes": "集合名词，通常作不可数。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["cattle", "farm animals"],
+      "derivatives": [],
+      "confusable": ["livingstock"],
+      "roots": ["live (alive, 活的)", "stock"]
+    }
+  },
+  {
+    "id": "dormitory",
+    "word": "dormitory",
+    "meaning": "n. 宿舍",
+    "phrases": [],
+    "examples": [],
+    "notes": "你手写为 dormtory，标准拼写为 dormitory；口语常作 dorm。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["dorm", "hostel"],
+      "derivatives": [],
+      "confusable": ["dormant"],
+      "roots": ["-dorm- (sleep, 睡眠)"]
+    }
+  },
+  {
+    "id": "plague",
+    "word": "plague",
+    "meaning": "n./v. 瘟疫；困扰",
+    "phrases": [
+      { "text": "a plague of sth. ……的泛滥", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；作动词表“不断困扰”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["epidemic", "affliction", "torment"],
+      "derivatives": ["plagued"],
+      "confusable": ["plaque"],
+      "roots": []
+    }
+  },
+  {
+    "id": "scruffy",
+    "word": "scruffy",
+    "meaning": "adj. 邋遢的；破旧的",
+    "phrases": [],
+    "examples": [],
+    "notes": "常形容外表、衣着、地方。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["shabby", "untidy", "scrappy"],
+      "derivatives": ["scruff", "scruffiness"],
+      "confusable": ["scuffy"],
+      "roots": []
+    }
+  },
+  {
+    "id": "linger",
+    "word": "linger",
+    "meaning": "v. 逗留；徘徊；久久不散",
+    "phrases": [
+      { "text": "linger on 久久不散；萦绕心头", "important": true },
+      { "text": "linger over sth. 细细品味", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["loiter", "remain", "tarry"],
+      "derivatives": ["lingering"],
+      "confusable": ["finger"],
+      "roots": []
+    }
+  },
+  {
+    "id": "outweigh",
+    "word": "outweigh",
+    "meaning": "v. 超过；比……重要",
+    "phrases": [
+      { "text": "the cost outweighs the gain 得不偿失", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；常用主动语态。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["exceed", "surpass", "override"],
+      "derivatives": [],
+      "confusable": ["outward"],
+      "roots": ["out- (over, 超过)", "-weigh- (weight, 重量)"]
+    }
+  },
+  {
+    "id": "neurological",
+    "word": "neurological",
+    "meaning": "adj. 神经学的",
+    "phrases": [],
+    "examples": [],
+    "notes": "名词 neurology；与 nerve 相关。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["neural"],
+      "derivatives": ["neurology", "neurologist", "neuron"],
+      "confusable": ["urological"],
+      "roots": ["neuro- (nerve, 神经)"]
+    }
+  },
+  {
+    "id": "affect",
+    "word": "affect",
+    "meaning": "n. 情感；v. 影响",
+    "phrases": [],
+    "examples": [],
+    "notes": "作名词时指“情感/情绪”（心理学用语），与 effect（影响/效果）区分。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["emotion", "influence", "impact"],
+      "derivatives": ["affection", "affective"],
+      "confusable": ["effect"],
+      "roots": ["af- (toward, 向)", "-fect- (do, 做)"]
+    }
+  },
+  {
+    "id": "interval",
+    "word": "interval",
+    "meaning": "n. 间隔；间歇",
+    "phrases": [
+      { "text": "at regular intervals 定期", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["gap", "pause", "break"],
+      "derivatives": [],
+      "confusable": ["internal"],
+      "roots": ["inter- (between, 在……之间)", "-val- (rampart, 墙)"]
+    }
+  },
+  {
+    "id": "hint",
+    "word": "hint",
+    "meaning": "n./v. 暗示；线索",
+    "phrases": [
+      { "text": "hint at sth. 隐晦暗示", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["clue", "suggestion", "imply"],
+      "derivatives": ["hinted"],
+      "confusable": ["hunt", "mint"],
+      "roots": []
+    }
+  },
+  {
+    "id": "specialize",
+    "word": "specialize",
+    "meaning": "v. 专攻；专门从事",
+    "phrases": [
+      { "text": "specialize in sth./doing sth. 专攻", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；英式拼写 specialise。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["major in", "focus on"],
+      "derivatives": ["specialist", "specialty", "specialized"],
+      "confusable": ["specify"],
+      "roots": ["-spec- (look/kind, 种类)"]
+    }
+  },
+  {
+    "id": "trauma",
+    "word": "trauma",
+    "meaning": "n. 创伤；精神创伤",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 traumatic；复数 traumas。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["wound", "shock", "injury"],
+      "derivatives": ["traumatic"],
+      "confusable": ["drama"],
+      "roots": ["-traum- (wound, 伤口)"]
+    }
+  },
+  {
+    "id": "creep",
+    "word": "creep",
+    "meaning": "v./n. 爬行；悄然发生",
+    "phrases": [
+      { "text": "creep in （坏习惯、负面情绪）悄然滋生", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；过去式/过去分词 crept。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["crawl", "sneak", "intrude"],
+      "derivatives": ["creepy"],
+      "confusable": ["seep", "weep"],
+      "roots": []
+    }
+  },
+  {
+    "id": "delve",
+    "word": "delve",
+    "meaning": "v. 钻研；深入探究",
+    "phrases": [
+      { "text": "delve into sth. 钻研", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；常接 into。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["investigate", "explore", "dig"],
+      "derivatives": [],
+      "confusable": ["delve"],
+      "roots": []
+    }
+  }
+]

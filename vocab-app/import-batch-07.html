@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 导入第 7 天</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        h1 { margin: 0 0 10px; color: #4f46e5; }
+        p { color: #6b7280; }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled { background: #9ca3af; cursor: not-allowed; }
+        .message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+        .success { background: #d1fae5; color: #065f46; }
+        .error { background: #fee2e2; color: #991b1b; }
+        .details { margin-top: 12px; font-size: 0.9rem; }
+    </style>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>导入第 7 天词汇</h1>
+            <p>将第 7 天的 28 个单词（8 重点 + 20 非重点）导入到「词汇随记」。</p>
+            <button id="import-btn">立即导入</button>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        const BATCH_DATA = [
+  {
+    "id": "drain",
+    "word": "drain",
+    "meaning": "v. 排水；耗尽；n. 下水道；消耗",
+    "phrases": [
+      { "text": "drain the pool", "important": true },
+      { "text": "drain sb. of sth. (剥夺、摆脱、说服均可用)", "important": true },
+      { "text": "drain away", "important": true },
+      { "text": "a drain on ……的消耗", "important": true }
+    ],
+    "examples": ["Long-term social pressure drains young people of their passion."],
+    "notes": "draining 形容“令人心力交瘁的”；drainage 排水系统。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["empty", "exhaust", "deplete"],
+      "derivatives": ["draining", "drainage"],
+      "confusable": ["drawn", "drown"],
+      "roots": []
+    }
+  },
+  {
+    "id": "debilitate",
+    "word": "debilitate",
+    "meaning": "vt. 使虚弱；透支（精神）",
+    "phrases": [
+      { "text": "debilitate sb. (of sth.)", "important": true }
+    ],
+    "examples": ["Chronic anxiety debilitates people of their motivation."],
+    "notes": "形容词 debilitating 很常用；注意例句中 debilitate 用第三人称单数。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["weaken", "enfeeble", "sap"],
+      "derivatives": ["debilitating", "debility"],
+      "confusable": ["facilitate"],
+      "roots": ["de- (down, 下)", "-bilit- (ability, 能力)"]
+    }
+  },
+  {
+    "id": "misinterpret",
+    "word": "misinterpret",
+    "meaning": "vt. 曲解；误解",
+    "phrases": [
+      { "text": "misinterpret sth. / one's intention / misinterpret sth. as sth.", "important": true }
+    ],
+    "examples": ["People frequently misinterpret his reserve as coldness."],
+    "notes": "名词 misinterpretation；前缀 mis- 表“错误”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["misunderstand", "distort", "misread"],
+      "derivatives": ["misinterpretation"],
+      "confusable": ["interpret"],
+      "roots": ["mis- (wrong, 错误)", "-pret- (value/price, 价值)"]
+    }
+  },
+  {
+    "id": "compile",
+    "word": "compile",
+    "meaning": "vt. 编纂；编译（代码）",
+    "phrases": [
+      { "text": "compile sth. (from sth.)", "important": true }
+    ],
+    "examples": ["Researchers compile massive data to analyse social trends."],
+    "notes": "计算机“编译”和日常“汇编”同形。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["assemble", "collect", "edit"],
+      "derivatives": ["compilation", "compiler"],
+      "confusable": ["comply", "compel"],
+      "roots": ["com- (together, 一起)", "-pil- (heap, 堆)"]
+    }
+  },
+  {
+    "id": "fossilize",
+    "word": "fossilize",
+    "meaning": "v. 石化；僵化",
+    "phrases": [
+      { "text": "fossilize one's mindset / thinking", "important": true }
+    ],
+    "examples": ["Rigid daily routines may fossilize our thinking."],
+    "notes": "引申义“使思想僵化”是重点。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["rigidify", "stagnate", "preserve"],
+      "derivatives": ["fossilized", "fossilization", "fossil"],
+      "confusable": ["fertilize"],
+      "roots": ["fossil- (dug up, 挖出)"]
+    }
+  },
+  {
+    "id": "pinpoint",
+    "word": "pinpoint",
+    "meaning": "vt. 精准找出；adj. 精确的",
+    "phrases": [
+      { "text": "pinpoint a problem / errors / the cause", "important": true }
+    ],
+    "examples": ["Only by pinpointing the root of youth-related pressure can we ease it effectively."],
+    "notes": "常作动词，强调“精确定位”。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["identify", "locate", "determine"],
+      "derivatives": [],
+      "confusable": ["pinnacle"],
+      "roots": ["pin- (point, 针尖)"]
+    }
+  },
+  {
+    "id": "predecessor",
+    "word": "predecessor",
+    "meaning": "n. 前任；前身",
+    "phrases": [
+      { "text": "one's predecessor", "important": true },
+      { "text": "the predecessor of sth. / outperform its predecessor", "important": true }
+    ],
+    "examples": ["The new-model policy fixes the flaws of its predecessor."],
+    "notes": "易混词 precursor（先驱；预兆；雏形）；同源词 precede（先于）。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["forerunner", "ancestor", "precursor"],
+      "derivatives": ["precede", "precedence"],
+      "confusable": ["precursor"],
+      "roots": ["pre- (before, 前)", "-cess- (go, 走)"]
+    }
+  },
+  {
+    "id": "procrastinate",
+    "word": "procrastinate",
+    "meaning": "vi. 耽搁；vt. 推迟",
+    "phrases": [
+      { "text": "procrastinate (on sth.) 拖延某事（on不可省略）", "important": true },
+      { "text": "procrastinate doing sth.", "important": true }
+    ],
+    "examples": ["People often procrastinate on tough-yet-vital work."],
+    "notes": "名词 procrastination [U] 拖延症。",
+    "isImportant": true,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["delay", "postpone", "defer"],
+      "derivatives": ["procrastination", "procrastinator"],
+      "confusable": ["procreate"],
+      "roots": ["pro- (forward, 向前)", "-crastin- (tomorrow, 明天)"]
+    }
+  },
+  {
+    "id": "supercharge",
+    "word": "supercharge",
+    "meaning": "v. 使……大幅提高；增压",
+    "phrases": [
+      { "text": "supercharge efficiency 大幅提升效率", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["boost", "enhance", "turbocharge"],
+      "derivatives": ["supercharged"],
+      "confusable": ["surcharge"],
+      "roots": ["super- (above, 超)", "-charg- (load, 装载)"]
+    }
+  },
+  {
+    "id": "miracle",
+    "word": "miracle",
+    "meaning": "n. 奇迹",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 miraculous；常见搭配 by a miracle。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["wonder", "marvel"],
+      "derivatives": ["miraculous"],
+      "confusable": ["mirage"],
+      "roots": ["-mir- (wonder, 惊奇)"]
+    }
+  },
+  {
+    "id": "peel",
+    "word": "peel",
+    "meaning": "v./n. 剥皮；剥落",
+    "phrases": [
+      { "text": "peel off 脱落；剥离", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["strip", "skin", "flake"],
+      "derivatives": ["peeling"],
+      "confusable": ["peal", "peer"],
+      "roots": []
+    }
+  },
+  {
+    "id": "segment",
+    "word": "segment",
+    "meaning": "n. 部分；片段；v. 分割",
+    "phrases": [],
+    "examples": [],
+    "notes": "名词读 /ˈseɡmənt/，动词读 /seɡˈment/。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["section", "part", "portion"],
+      "derivatives": ["segmentation"],
+      "confusable": ["fragmant"],
+      "roots": ["-seg- (cut, 切)"]
+    }
+  },
+  {
+    "id": "incision",
+    "word": "incision",
+    "meaning": "n. 切口；伤口",
+    "phrases": [],
+    "examples": [],
+    "notes": "动词 incise；与第 3 天 incisive 同根。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["cut", "slit", "gash"],
+      "derivatives": ["incise", "incisive"],
+      "confusable": ["decision"],
+      "roots": ["-cis- (cut, 切)"]
+    }
+  },
+  {
+    "id": "frond",
+    "word": "frond",
+    "meaning": "n. 蕨叶；棕榈叶",
+    "phrases": [],
+    "examples": [],
+    "notes": "植物学术语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["leaf", "foliage"],
+      "derivatives": [],
+      "confusable": ["front", "fond"],
+      "roots": []
+    }
+  },
+  {
+    "id": "shave",
+    "word": "shave",
+    "meaning": "v. 剃；刮；削减",
+    "phrases": [
+      { "text": "shave off 剃去；削减（成本、时间）", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["cut", "trim", "reduce"],
+      "derivatives": ["shaver", "shaving"],
+      "confusable": ["shove", "slave"],
+      "roots": []
+    }
+  },
+  {
+    "id": "denial",
+    "word": "denial",
+    "meaning": "n. 否认；拒绝给予",
+    "phrases": [],
+    "examples": [],
+    "notes": "动词 deny；常见搭配 in denial 拒绝接受现实。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["refusal", "rejection"],
+      "derivatives": ["deny"],
+      "confusable": ["denial"],
+      "roots": ["de- (away, 离开)", "-neg- (say no, 否定)"]
+    }
+  },
+  {
+    "id": "bloom",
+    "word": "bloom",
+    "meaning": "v./n. 开花；繁荣",
+    "phrases": [
+      { "text": "in full bloom 全盛时期", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["flower", "flourish", "blossom"],
+      "derivatives": ["blooming"],
+      "confusable": ["gloom", "broom"],
+      "roots": []
+    }
+  },
+  {
+    "id": "frenetic",
+    "word": "frenetic",
+    "meaning": "adj. 狂热的；狂乱的",
+    "phrases": [],
+    "examples": [],
+    "notes": "与 frantic 近义。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["frantic", "frenzied", "hectic"],
+      "derivatives": ["frenzy"],
+      "confusable": ["genetic"],
+      "roots": ["-phren- (mind, 心智)"]
+    }
+  },
+  {
+    "id": "anatomy",
+    "word": "anatomy",
+    "meaning": "n. 解剖；解剖学；结构",
+    "phrases": [],
+    "examples": [],
+    "notes": "形容词 anatomical。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["structure", "dissection"],
+      "derivatives": ["anatomical", "anatomist"],
+      "confusable": ["economy"],
+      "roots": ["-tomy- (cut, 切)"]
+    }
+  },
+  {
+    "id": "engrave",
+    "word": "engrave",
+    "meaning": "v. 雕刻；铭记",
+    "phrases": [
+      { "text": "engrave sth. on one's memory 铭记于心", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["carve", "etch", "imprint"],
+      "derivatives": ["engraving", "engraver"],
+      "confusable": ["engross"],
+      "roots": ["en- (in, 进入)", "-grav- (scratch, 刻)"]
+    }
+  },
+  {
+    "id": "stunning",
+    "word": "stunning",
+    "meaning": "adj. 极好的；令人震惊的",
+    "phrases": [],
+    "examples": [],
+    "notes": "动词 stun；stunning view 绝美景色。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["astonishing", "gorgeous", "striking"],
+      "derivatives": ["stun"],
+      "confusable": ["stunning"],
+      "roots": []
+    }
+  },
+  {
+    "id": "precursor",
+    "word": "precursor",
+    "meaning": "n. 先驱；预兆；雏形",
+    "phrases": [],
+    "examples": [],
+    "notes": "与 predecessor 易混，precursor 强调“先驱/预兆”。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["forerunner", "herald", "predecessor"],
+      "derivatives": ["precursory"],
+      "confusable": ["predecessor"],
+      "roots": ["pre- (before, 前)", "-cur- (run, 跑)"]
+    }
+  },
+  {
+    "id": "thrust",
+    "word": "thrust",
+    "meaning": "v./n. 刺；推；要点",
+    "phrases": [
+      { "text": "thrust sth. upon sb. 将某事强加给某人", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语；过去式/过去分词 thrust。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["push", "stab", "force"],
+      "derivatives": ["thruster"],
+      "confusable": ["trust", "thirst"],
+      "roots": []
+    }
+  },
+  {
+    "id": "capture",
+    "word": "capture",
+    "meaning": "v./n. 捕获；捕捉；吸引",
+    "phrases": [],
+    "examples": [],
+    "notes": "capture one's attention 吸引注意；capture the moment 捕捉瞬间。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["catch", "seize", "fascinate"],
+      "derivatives": ["captive", "captivity"],
+      "confusable": ["captain"],
+      "roots": ["-capt- (take, 拿)"]
+    }
+  },
+  {
+    "id": "commute",
+    "word": "commute",
+    "meaning": "v./n. 通勤；减刑",
+    "phrases": [
+      { "text": "commute between A and B 在A、B之间通勤", "important": true }
+    ],
+    "examples": [],
+    "notes": "Other Phrases 重点短语。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["travel", "reduce", "transform"],
+      "derivatives": ["commuter", "commutation"],
+      "confusable": ["commit", "communicate"],
+      "roots": ["com- (intensive, 加强)", "-mut- (change, 改变)"]
+    }
+  },
+  {
+    "id": "outsource",
+    "word": "outsource",
+    "meaning": "v. 外包",
+    "phrases": [],
+    "examples": [],
+    "notes": "商业常用词。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["subcontract", "delegate"],
+      "derivatives": ["outsourcing"],
+      "confusable": ["outscore"],
+      "roots": ["out- (outside, 外)", "-sourc- (source, 来源)"]
+    }
+  },
+  {
+    "id": "curative",
+    "word": "curative",
+    "meaning": "adj. 有疗效的；治疗的",
+    "phrases": [],
+    "examples": [],
+    "notes": "名词 cure；curative effect 疗效。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": ["healing", "therapeutic", "remedial"],
+      "derivatives": ["cure", "curator"],
+      "confusable": ["creative"],
+      "roots": ["-cur- (care/heal, 关心/治疗)"]
+    }
+  },
+  {
+    "id": "dopamine",
+    "word": "dopamine",
+    "meaning": "n. 多巴胺",
+    "phrases": [],
+    "examples": [],
+    "notes": "神经递质，与快乐和奖励机制相关。",
+    "isImportant": false,
+    "createdAt": "2026-07-02",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "derivatives": [],
+      "confusable": ["dopamine"],
+      "roots": ["-dop- (dope, 麻醉剂)", "-amine- (amine, 胺)"]
+    }
+  }
+]
+;
+
+        const STORAGE_KEY = 'vocab_words';
+        const messageEl = document.getElementById('message');
+        const importBtn = document.getElementById('import-btn');
+
+        function showMessage(text, isError) {
+            messageEl.textContent = text;
+            messageEl.className = 'message ' + (isError ? 'error' : 'success');
+            messageEl.style.display = 'block';
+        }
+
+        importBtn.addEventListener('click', function () {
+            try {
+                const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                const existingIds = new Set(existing.map(w => w.id));
+                let added = 0;
+                let skipped = 0;
+
+                BATCH_DATA.forEach(word => {
+                    if (existingIds.has(word.id)) {
+                        skipped++;
+                    } else {
+                        existing.push(word);
+                        existingIds.add(word.id);
+                        added++;
+                    }
+                });
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+
+                showMessage(
+                    `第 7 天导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。`,
+                    false
+                );
+
+                const details = document.createElement('div');
+                details.className = 'details';
+                details.innerHTML = `
+                    现在可以 <a href="index.html">打开词汇随记</a> 查看。<br>
+                    当前本地共有 ${existing.length} 个单词。
+                `;
+                messageEl.appendChild(details);
+            } catch (err) {
+                showMessage('导入失败：' + err.message, true);
+            }
+        });
+    </script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 今日复习</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>今日复习</h1>
+            <p>基于 SRS 间隔重复算法</p>
+        </header>
+
+        <section class="card" id="review-container">
+            <div class="review-progress">
+                <span id="progress-text">第 1 / 10 个</span>
+            </div>
+
+            <div class="review-card" id="review-card">
+                <div class="card-front" id="card-front">
+                    <div class="card-label">单词</div>
+                    <h2 class="review-word" id="review-word">word</h2>
+                    <p class="review-hint">点击卡片或下方按钮查看释义</p>
+                </div>
+                <div class="card-back" id="card-back" style="display: none;">
+                    <div class="card-label">释义</div>
+                    <p class="review-meaning" id="review-meaning">meaning</p>
+                    <div id="review-details"></div>
+                </div>
+            </div>
+
+            <div class="review-actions" id="review-actions">
+                <button id="flip-btn" class="flip-btn">翻转卡片</button>
+            </div>
+
+            <div class="rating-actions" id="rating-actions" style="display: none;">
+                <button class="rate-btn again" data-rating="again">忘记</button>
+                <button class="rate-btn hard" data-rating="hard">模糊</button>
+                <button class="rate-btn good" data-rating="good">认识</button>
+            </div>
+        </section>
+
+        <section class="card" id="completion-message" style="display: none;">
+            <h2>🎉 今日复习完成</h2>
+            <p id="completion-text"></p>
+            <a href="index.html" class="review-btn">返回首页</a>
+        </section>
+    </div>
+
+    <script src="review.js"></script>
+    <script src="/register-sw.js"></script>
+</body>
+</html>
