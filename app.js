@@ -98,11 +98,11 @@ function phrasesToText(phrases) {
     return phrases.map(p => (p.important ? '* ' : '') + p.text).join('\n');
 }
 
-// 解析关联词输入：用逗号/顿号/分号分隔，去除空白
+// 解析关联词输入：用中文逗号/顿号/分号分隔，英文逗号保留在词项内
 function parseRelations(text) {
     if (!text || !text.trim()) return [];
     return text
-        .split(/[,，;；、]/)
+        .split(/[，;；、]/)
         .map(s => s.trim())
         .filter(s => s.length > 0);
 }
