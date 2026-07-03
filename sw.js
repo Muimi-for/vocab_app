@@ -22,6 +22,7 @@ const ASSETS = [
     '/network.css',
     '/network.js',
     '/repair.html',
+    '/backup.html',
     '/import.html',
     '/import-tool.html',
     '/import-batch-08.html',

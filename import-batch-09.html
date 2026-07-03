@@ -15,6 +15,32 @@
         .message { margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 0.95rem; }
         .message.success { background: #d1fae5; color: #065f46; }
         .message.error { background: #fee2e2; color: #991b1b; }
+        .file-box {
+            display: none;
+            margin-top: 16px;
+            padding: 16px;
+            border: 2px dashed #c7c7c7;
+            border-radius: 10px;
+            background: #f9fafb;
+        }
+        .file-box.active { display: block; }
+        .file-box label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4f46e5;
+        }
+        .file-box input[type="file"] {
+            width: 100%;
+            padding: 8px;
+        }
+        .backup-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #4f46e5;
+            text-decoration: underline;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -28,6 +54,12 @@
             <h2>一键导入</h2>
             <p>点击按钮将第 9 天词汇添加到本地存储。已存在的单词会自动跳过。</p>
             <button id="import-btn" class="review-btn">开始导入</button>
+
+            <div id="file-box" class="file-box">
+                <label for="file-input">检测到本地文件访问，请选择对应 JSON 文件</label>
+                <input type="file" id="file-input" accept=".json,application/json">
+            </div>
+
             <div id="message"></div>
             <div class="back-link">
                 <a href="import.html">← 返回导入中心</a>
@@ -40,34 +72,99 @@
         const STORAGE_KEY = 'vocab_words';
         const BATCH_FILE = 'data/words-batch-09.json';
 
-        document.getElementById('import-btn').addEventListener('click', async function () {
-            const messageEl = document.getElementById('message');
-            try {
-                const resp = await fetch(BATCH_FILE);
-                if (!resp.ok) throw new Error('无法加载词汇数据');
-                const batchData = await resp.json();
+        const importBtn = document.getElementById('import-btn');
+        const fileBox = document.getElementById('file-box');
+        const fileInput = document.getElementById('file-input');
+        const messageEl = document.getElementById('message');
 
-                const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-                const existingIds = new Set(existing.map(w => w.id));
-                let added = 0;
-                let skipped = 0;
+        function showMessage(text, isError) {
+            messageEl.className = 'message ' + (isError ? 'error' : 'success');
+            messageEl.innerHTML = text;
+        }
 
-                batchData.forEach(word => {
-                    if (existingIds.has(word.id)) {
-                        skipped++;
-                    } else {
-                        existing.push(word);
-                        existingIds.add(word.id);
-                        added++;
+        function downloadBackup(words) {
+            const blob = new Blob([JSON.stringify(words, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const date = new Date().toISOString().slice(0, 10);
+            a.href = url;
+            a.download = `vocab-backup-${date}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function mergeAndSave(batchData) {
+            const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            const existingIds = new Set(existing.map(w => w.id));
+            let added = 0;
+            let skipped = 0;
+
+            batchData.forEach(word => {
+                if (existingIds.has(word.id)) {
+                    skipped++;
+                } else {
+                    existing.push(word);
+                    existingIds.add(word.id);
+                    added++;
+                }
+            });
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+            downloadBackup(existing);
+
+            showMessage(
+                `导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。<br>` +
+                `本地共有 ${existing.length} 个单词，备份已自动下载。<br>` +
+                `<a class="backup-link" href="index.html">返回首页</a>`,
+                false
+            );
+        }
+
+        async function loadFromNetwork() {
+            const resp = await fetch(BATCH_FILE);
+            if (!resp.ok) throw new Error('无法加载词汇数据');
+            return await resp.json();
+        }
+
+        function loadFromFile(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (!Array.isArray(data)) throw new Error('文件内容必须是单词数组');
+                        resolve(data);
+                    } catch (err) {
+                        reject(err);
                     }
-                });
+                };
+                reader.onerror = () => reject(new Error('读取文件失败'));
+                reader.readAsText(file);
+            });
+        }
 
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
-                messageEl.className = 'message success';
-                messageEl.innerHTML = `导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。<br><a href="index.html">返回首页</a>`;
+        importBtn.addEventListener('click', async function () {
+            try {
+                const batchData = await loadFromNetwork();
+                mergeAndSave(batchData);
             } catch (err) {
-                messageEl.className = 'message error';
-                messageEl.textContent = '导入失败：' + err.message;
+                // file:// 协议或 fetch 失败时，提示手动选择文件
+                fileBox.classList.add('active');
+                showMessage('自动加载失败（' + err.message + '），请从下方选择本地 JSON 文件。', true);
+            }
+        });
+
+        fileInput.addEventListener('change', async function () {
+            const file = fileInput.files[0];
+            if (!file) return;
+            try {
+                const batchData = await loadFromFile(file);
+                mergeAndSave(batchData);
+                fileBox.classList.remove('active');
+            } catch (err) {
+                showMessage('导入失败：' + err.message, true);
             }
         });
     </script>
