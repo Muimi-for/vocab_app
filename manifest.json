@@ -2,12 +2,12 @@
     "name": "词汇随记",
     "short_name": "词汇随记",
     "description": "个人英语词汇记忆工具，支持 SRS 复习、词组复习与词汇星图",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#f3f4f6",
     "theme_color": "#4f46e5",
     "orientation": "portrait-primary",
-    "scope": "/",
+    "scope": ".",
     "icons": [
         {
             "src": "icon-192.png",
