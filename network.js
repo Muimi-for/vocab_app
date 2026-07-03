@@ -40,8 +40,10 @@ let allWords = [];
 let simulation = null;
 let svg = null;
 let graphGroup = null;
+let zoomBehavior = null;
 let width = 0;
 let height = 0;
+let currentNodes = [];
 
 function init() {
     allWords = loadWords();
@@ -61,15 +63,17 @@ function init() {
     graphGroup = svg.append('g');
 
     // 缩放和平移
-    svg.call(d3.zoom()
+    zoomBehavior = d3.zoom()
         .extent([[0, 0], [width, height]])
         .scaleExtent([0.5, 4])
         .on('zoom', (event) => {
             graphGroup.attr('transform', event.transform);
-        }));
+        });
+    svg.call(zoomBehavior);
 
     renderGraph();
     bindControls();
+    bindSearchLocate();
 }
 
 function getActiveRelations() {
@@ -169,6 +173,7 @@ function renderGraph() {
     graphGroup.selectAll('*').remove();
 
     const { nodes, links } = buildGraphData();
+    currentNodes = nodes;
 
     if (nodes.length === 0) {
         graphGroup.append('text')
@@ -331,6 +336,7 @@ function showDetails(d) {
     if (w.relations) {
         const labels = {
             synonyms: '近义词',
+            antonyms: '反义词',
             derivatives: '派生词',
             confusable: '易混词',
             roots: '典型词根 / 同源'
@@ -363,6 +369,145 @@ function bindControls() {
             simulation.alpha(0.3).restart();
         }
     });
+}
+
+// ---------- 星图检索定位 ----------
+
+function bindSearchLocate() {
+    const input = document.getElementById('node-search');
+    const btn = document.getElementById('locate-btn');
+    const suggestions = document.getElementById('search-suggestions');
+    if (!input || !btn || !suggestions) return;
+
+    let focusedIndex = -1;
+
+    input.addEventListener('input', function () {
+        const query = this.value.trim().toLowerCase();
+        focusedIndex = -1;
+        if (!query) {
+            suggestions.innerHTML = '';
+            suggestions.classList.remove('active');
+            return;
+        }
+
+        const matches = currentNodes
+            .filter(n => n.word.toLowerCase().includes(query))
+            .slice(0, 10);
+
+        if (matches.length === 0) {
+            suggestions.innerHTML = '<li>无匹配单词</li>';
+        } else {
+            suggestions.innerHTML = matches.map(n =>
+                `<li data-id="${n.id}">${escapeHtml(n.word)} <span class="suggestion-meaning">${escapeHtml(n.meaning.slice(0, 20))}</span></li>`
+            ).join('');
+        }
+        suggestions.classList.add('active');
+    });
+
+    input.addEventListener('keydown', function (event) {
+        const items = suggestions.querySelectorAll('li[data-id]');
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            focusedIndex = Math.min(focusedIndex + 1, items.length - 1);
+            updateFocused(items);
+        } else if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            focusedIndex = Math.max(focusedIndex - 1, 0);
+            updateFocused(items);
+        } else if (event.key === 'Enter') {
+            event.preventDefault();
+            if (focusedIndex >= 0 && items[focusedIndex]) {
+                locateNodeById(items[focusedIndex].dataset.id);
+            } else {
+                locateFirstMatch(input.value.trim());
+            }
+            suggestions.classList.remove('active');
+        } else if (event.key === 'Escape') {
+            suggestions.classList.remove('active');
+            focusedIndex = -1;
+        }
+    });
+
+    suggestions.addEventListener('click', function (event) {
+        const item = event.target.closest('li[data-id]');
+        if (!item) return;
+        locateNodeById(item.dataset.id);
+        suggestions.classList.remove('active');
+        input.value = '';
+    });
+
+    btn.addEventListener('click', function () {
+        locateFirstMatch(input.value.trim());
+        suggestions.classList.remove('active');
+    });
+
+    // 点击外部关闭建议列表
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.search-locate')) {
+            suggestions.classList.remove('active');
+            focusedIndex = -1;
+        }
+    });
+}
+
+function updateFocused(items) {
+    items.forEach((item, i) => {
+        item.classList.toggle('focused', i === focusedIndex);
+    });
+}
+
+function locateFirstMatch(query) {
+    if (!query) return;
+    const lower = query.toLowerCase();
+    const match = currentNodes.find(n => n.word.toLowerCase().includes(lower));
+    if (match) {
+        locateNode(match);
+    } else {
+        alert('未找到匹配的单词');
+    }
+}
+
+function locateNodeById(id) {
+    const node = currentNodes.find(n => n.id === id);
+    if (node) locateNode(node);
+}
+
+function locateNode(node) {
+    if (!node || typeof node.x !== 'number' || typeof node.y !== 'number') return;
+
+    // 取消之前的高亮
+    d3.selectAll('.node.located').classed('located', false);
+    d3.selectAll('.highlight-ring').remove();
+
+    // 高亮当前节点
+    const nodeSelection = d3.selectAll('.node').filter(d => d.id === node.id);
+    nodeSelection.classed('located', true);
+
+    // 添加脉冲高亮环
+    const ring = graphGroup.append('circle')
+        .attr('class', 'highlight-ring')
+        .attr('cx', node.x)
+        .attr('cy', node.y)
+        .attr('r', 28)
+        .attr('fill', 'none');
+
+    ring.transition()
+        .duration(1000)
+        .attr('r', 40)
+        .style('opacity', 0)
+        .remove();
+
+    // 计算居中变换
+    const scale = 1.8;
+    const tx = width / 2 - scale * node.x;
+    const ty = height / 2 - scale * node.y;
+
+    svg.transition()
+        .duration(750)
+        .call(zoomBehavior.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+
+    // 显示详情
+    showDetails(node);
 }
 
 init();

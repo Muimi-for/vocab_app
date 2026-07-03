@@ -39,6 +39,15 @@
             </div>
         </section>
 
+        <section class="card search-locate">
+            <div class="locate-box">
+                <input type="text" id="node-search" placeholder="在星图中搜索单词…" autocomplete="off">
+                <button type="button" id="locate-btn" class="locate-btn">定位</button>
+            </div>
+            <ul id="search-suggestions" class="search-suggestions"></ul>
+            <p class="search-tip">输入单词，点击定位即可移动到对应节点并高亮显示</p>
+        </section>
+
         <section class="card graph-container">
             <div id="graph"></div>
             <div id="node-details" class="node-details">
