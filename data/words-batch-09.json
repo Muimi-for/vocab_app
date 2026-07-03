@@ -25,6 +25,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [
@@ -40,7 +42,7 @@
   {
     "id": "strip",
     "word": "strip",
-    "meaning": "n. 长条；v. 剥去；剥夺；拆分",
+    "meaning": "n. 长条；条纹；v. 剥去；剥夺；拆分",
     "phrases": [
       {
         "text": "a strip of gauze / bandage / fabric / coastal strip",
@@ -67,6 +69,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [
         "deprive"
@@ -82,7 +86,7 @@
   {
     "id": "devise",
     "word": "devise",
-    "meaning": "v. 设计，构思",
+    "meaning": "v. 设计，构思；发明",
     "phrases": [
       {
         "text": "devise a plan / a solution / a circuit",
@@ -97,6 +101,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -110,7 +116,7 @@
   {
     "id": "rigid",
     "word": "rigid",
-    "meaning": "adj. 僵化的，一成不变的；不易变形的",
+    "meaning": "adj. 僵化的，一成不变的；不易变形的；严格的",
     "phrases": [
       {
         "text": "rigid thinking / regulations",
@@ -129,6 +135,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -142,7 +150,7 @@
   {
     "id": "resemble",
     "word": "resemble",
-    "meaning": "vt. 像",
+    "meaning": "vt. 像；与…相似",
     "phrases": [
       {
         "text": "resemble sb./sth.",
@@ -157,6 +165,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -189,6 +199,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -221,6 +233,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -234,7 +248,7 @@
   {
     "id": "unveil",
     "word": "unveil",
-    "meaning": "v. 揭晓；揭露",
+    "meaning": "v. 揭晓；揭露；揭幕",
     "phrases": [
       {
         "text": "unveil a policy / the truth",
@@ -249,6 +263,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -260,7 +276,7 @@
   {
     "id": "gauze",
     "word": "gauze",
-    "meaning": "",
+    "meaning": "n. 纱布；薄纱；金属网",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -268,25 +284,46 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "sterile",
     "word": "sterile",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "adj. 无菌的；贫瘠的；枯燥的；无结果的",
+    "phrases": [
+      {
+        "text": "a sterile debate 无果的空谈",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "surgical",
     "word": "surgical",
-    "meaning": "",
+    "meaning": "adj. 外科的；手术的；精准的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -294,12 +331,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "clumsy",
     "word": "clumsy",
-    "meaning": "",
+    "meaning": "adj. 笨拙的；不灵活的；不得体的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -307,38 +352,72 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "fabric",
     "word": "fabric",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 织物；布料；结构；肌理",
+    "phrases": [
+      {
+        "text": "the fabric of …的结构、肌理、根基",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "bandage",
     "word": "bandage",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 绷带；v. 用绷带包扎",
+    "phrases": [
+      {
+        "text": "bandage over deep problems 治标不治本",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "companion",
     "word": "companion",
-    "meaning": "",
+    "meaning": "n. 同伴；伴侣；指南",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -346,12 +425,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "postdoctoral",
     "word": "postdoctoral",
-    "meaning": "",
+    "meaning": "adj. 博士后的；n. 博士后研究人员",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -359,12 +446,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "faint",
     "word": "faint",
-    "meaning": "",
+    "meaning": "adj. 微弱的；模糊的；v. 昏倒；n. 昏厥",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -372,25 +467,46 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "spectrum",
     "word": "spectrum",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 光谱；频谱；范围；系列",
+    "phrases": [
+      {
+        "text": "a wide spectrum of 广泛的一系列",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "astronomer",
     "word": "astronomer",
-    "meaning": "",
+    "meaning": "n. 天文学家",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -398,12 +514,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "spectral",
     "word": "spectral",
-    "meaning": "",
+    "meaning": "adj. 光谱的；幽灵的；鬼怪的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -411,12 +535,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "baffle",
     "word": "baffle",
-    "meaning": "",
+    "meaning": "v. 使困惑；阻挠；n. 挡板",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -424,12 +556,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "thermal",
     "word": "thermal",
-    "meaning": "",
+    "meaning": "adj. 热的；热量的；保暖的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -437,12 +577,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "noxious",
     "word": "noxious",
-    "meaning": "",
+    "meaning": "adj. 有害的；有毒的；令人厌恶的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -450,12 +598,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "sulfide",
     "word": "sulfide",
-    "meaning": "",
+    "meaning": "n. 硫化物",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -463,12 +619,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "ammonia",
     "word": "ammonia",
-    "meaning": "",
+    "meaning": "n. 氨；氨水",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -476,38 +640,76 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "creep",
     "word": "creep",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "v. 爬行；悄悄移动；蔓延；n. 爬行；毛骨悚然的感觉",
+    "phrases": [
+      {
+        "text": "creep in 悄悄出现",
+        "important": true
+      },
+      {
+        "text": "creep up 逐步攀升",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "emanate",
     "word": "emanate",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "v. 发出；散发；发源",
+    "phrases": [
+      {
+        "text": "emanate from 由…衍生出；从…发出",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "copilot",
     "word": "copilot",
-    "meaning": "",
+    "meaning": "n. （飞机）副驾驶",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -515,6 +717,14 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   }
 ]

@@ -97,25 +97,45 @@
 
         function mergeAndSave(batchData) {
             const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-            const existingIds = new Set(existing.map(w => w.id));
+            const existingMap = new Map(existing.map((w, i) => [w.id, i]));
+            const duplicates = batchData.filter(word => existingMap.has(word.id));
             let added = 0;
-            let skipped = 0;
+            let updated = 0;
 
-            batchData.forEach(word => {
-                if (existingIds.has(word.id)) {
-                    skipped++;
-                } else {
+            if (duplicates.length > 0) {
+                const preview = duplicates.slice(0, 5).map(w => w.word).join('、');
+                const more = duplicates.length > 5 ? ` 等 ${duplicates.length} 个` : '';
+                const overwrite = confirm(
+                    `检测到本地已存在以下重复单词：\n${preview}${more}\n\n` +
+                    `点击“确定”：用新数据覆盖这些单词\n` +
+                    `点击“取消”：保留本地旧数据，仅导入新单词`
+                );
+
+                batchData.forEach(word => {
+                    if (existingMap.has(word.id)) {
+                        if (overwrite) {
+                            existing[existingMap.get(word.id)] = word;
+                            updated++;
+                        }
+                    } else {
+                        existing.push(word);
+                        existingMap.set(word.id, existing.length - 1);
+                        added++;
+                    }
+                });
+            } else {
+                batchData.forEach(word => {
                     existing.push(word);
-                    existingIds.add(word.id);
+                    existingMap.set(word.id, existing.length - 1);
                     added++;
-                }
-            });
+                });
+            }
 
             localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
             downloadBackup(existing);
 
             showMessage(
-                `导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。<br>` +
+                `导入成功！新增 ${added} 个单词，更新 ${updated} 个，跳过 ${duplicates.length - updated} 个重复。<br>` +
                 `本地共有 ${existing.length} 个单词，备份已自动下载。<br>` +
                 `<a class="backup-link" href="index.html">返回首页</a>`,
                 false

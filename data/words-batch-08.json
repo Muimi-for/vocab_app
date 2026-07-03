@@ -17,6 +17,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -49,6 +51,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -77,6 +81,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -106,6 +112,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [
         "disastrous"
@@ -148,6 +156,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -178,6 +188,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [
         "stationary"
@@ -213,6 +225,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [
         "contemplate"
@@ -243,6 +257,8 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
     "relations": {
       "synonyms": [],
       "antonyms": [],
@@ -256,20 +272,33 @@
   {
     "id": "dip",
     "word": "dip",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "v. 蘸；下降；浏览；n. 蘸；下降",
+    "phrases": [
+      {
+        "text": "dip into sth. 浏览；涉猎（书籍）",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "canyon",
     "word": "canyon",
-    "meaning": "",
+    "meaning": "n. 峡谷",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -277,12 +306,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "lush",
     "word": "lush",
-    "meaning": "",
+    "meaning": "adj. 茂盛的；奢华的；丰富的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -290,12 +327,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "limestone",
     "word": "limestone",
-    "meaning": "",
+    "meaning": "n. 石灰岩；石灰石",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -303,12 +348,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "spectator",
     "word": "spectator",
-    "meaning": "",
+    "meaning": "n. 观众；旁观者",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -316,51 +369,98 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "fluidity",
     "word": "fluidity",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 流动性；流畅性；思维灵活性",
+    "phrases": [
+      {
+        "text": "fluidity of thought 思维灵活性",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "unassailable",
     "word": "unassailable",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "adj. 无懈可击的；不可质疑的",
+    "phrases": [
+      {
+        "text": "unassailable position 不可撼动的地位",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "ritual",
     "word": "ritual",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 仪式；惯例；adj. 仪式的",
+    "phrases": [
+      {
+        "text": "religious ritual 宗教仪式",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "fortification",
     "word": "fortification",
-    "meaning": "",
+    "meaning": "n. 防御工事；堡垒；加强",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -368,25 +468,46 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "dread",
     "word": "dread",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "v./n. 畏惧；担忧；厌恶",
+    "phrases": [
+      {
+        "text": "in dread of 畏惧…",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "doctoral",
     "word": "doctoral",
-    "meaning": "",
+    "meaning": "adj. 博士的；博士学位的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -394,12 +515,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "fixate",
     "word": "fixate",
-    "meaning": "",
+    "meaning": "v. 使固定；注视；纠缠于",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -407,38 +536,72 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "discreet",
     "word": "discreet",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "adj. 谨慎的；审慎的；不引人注目的",
+    "phrases": [
+      {
+        "text": "discreet behavior 行事谨慎",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "prowess",
     "word": "prowess",
-    "meaning": "",
-    "phrases": [],
+    "meaning": "n. 英勇；高超技艺；杰出能力",
+    "phrases": [
+      {
+        "text": "academic prowess 学术能力",
+        "important": true
+      }
+    ],
     "examples": [],
     "notes": "",
     "isImportant": false,
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "populate",
     "word": "populate",
-    "meaning": "",
+    "meaning": "v. 居住于；移民于；填充",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -446,12 +609,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "biometric",
     "word": "biometric",
-    "meaning": "",
+    "meaning": "adj. 生物特征识别的；生物统计的",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -459,12 +630,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "catalog",
     "word": "catalog",
-    "meaning": "",
+    "meaning": "n. 目录；一览表；v. 编目；列举",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -472,25 +651,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
-  },
-  {
-    "id": "tale",
-    "word": "tale",
-    "meaning": "",
-    "phrases": [],
-    "examples": [],
-    "notes": "",
-    "isImportant": false,
-    "createdAt": "2026-07-03",
-    "lastReviewedAt": null,
-    "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "consign",
     "word": "consign",
-    "meaning": "",
+    "meaning": "v. 委托；交付；托运；consign sb. to 使…陷入",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -498,12 +672,20 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   },
   {
     "id": "devastation",
     "word": "devastation",
-    "meaning": "",
+    "meaning": "n. 毁灭；破坏；荒废",
     "phrases": [],
     "examples": [],
     "notes": "",
@@ -511,6 +693,35 @@
     "createdAt": "2026-07-03",
     "lastReviewedAt": null,
     "reviewLevel": 0,
-    "relations": null
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "tale",
+    "word": "tale",
+    "meaning": "n. 故事；传说；叙述",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "interval": 0,
+    "nextReviewDate": null,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
   }
 ]
