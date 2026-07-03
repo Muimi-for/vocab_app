@@ -1,9 +1,9 @@
 /**
  * 词汇随记 - Service Worker
- * 提供 PWA 离线缓存支持
+ * 提供 PWA 离线缓存支持，优先保证更新及时性
  */
 
-const CACHE_NAME = 'vocab-pwa-v2-retry';
+const CACHE_NAME = 'vocab-pwa-v3';
 const ASSETS = [
     '/',
     '/index.html',
@@ -51,7 +51,7 @@ self.addEventListener('install', event => {
     );
 });
 
-// 激活时清理旧版本缓存
+// 激活时清理旧版本缓存并接管所有页面
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(keys =>
@@ -62,34 +62,50 @@ self.addEventListener('activate', event => {
     );
 });
 
-// 拦截请求：已缓存资源优先使用缓存，其他走网络
+// 判断请求是否为 HTML 页面
+function isPage(request) {
+    return request.destination === 'document' || request.mode === 'navigate';
+}
+
+// 监听页面发来的跳过等待消息
+self.addEventListener('message', event => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        self.skipWaiting();
+    }
+});
+
+// 拦截请求
 self.addEventListener('fetch', event => {
     const { request } = event;
 
-    // 跳过非 GET 请求和 chrome-extension 等 scheme
+    // 跳过非 GET 请求和非 http/https 请求
     if (request.method !== 'GET' || !request.url.startsWith('http')) {
         return;
     }
 
     event.respondWith(
         caches.match(request).then(cached => {
-            if (cached) {
-                return cached;
+            // HTML 页面：优先网络，失败回退缓存，确保更新及时
+            if (isPage(request)) {
+                return fetch(request)
+                    .then(response => {
+                        const clone = response.clone();
+                        caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+                        return response;
+                    })
+                    .catch(() => cached || caches.match('/index.html'));
             }
-            return fetch(request).then(response => {
-                // 不缓存动态或敏感请求
-                return response;
-            }).catch(() => {
-                // 离线且未缓存时，返回兜底响应
-                if (request.destination === 'document') {
-                    return caches.match('/index.html');
-                }
-                return new Response('离线状态，该资源尚未缓存', {
-                    status: 503,
-                    statusText: 'Service Unavailable',
-                    headers: { 'Content-Type': 'text/plain;charset=utf-8' }
-                });
-            });
+
+            // 其他资源：先返回缓存，同时后台更新（stale-while-revalidate）
+            const fetchPromise = fetch(request)
+                .then(response => {
+                    const clone = response.clone();
+                    caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+                    return response;
+                })
+                .catch(() => cached);
+
+            return cached || fetchPromise;
         })
     );
 });
