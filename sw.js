@@ -3,7 +3,7 @@
  * 提供 PWA 离线缓存支持
  */
 
-const CACHE_NAME = 'vocab-pwa-v2';
+const CACHE_NAME = 'vocab-pwa-v2-retry';
 const ASSETS = [
     '/',
     '/index.html',
