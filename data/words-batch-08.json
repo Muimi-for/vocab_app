@@ -1,0 +1,516 @@
+[
+  {
+    "id": "monumental",
+    "word": "monumental",
+    "meaning": "adj. 意义非凡的；巨型石碑式的",
+    "phrases": [
+      {
+        "text": "monumental achievements / progress / breakthrough",
+        "important": true
+      }
+    ],
+    "examples": [
+      "He made a monumental breakthrough in mechanic design."
+    ],
+    "notes": "to n. monument 纪念碑",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "monument"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "elaborate",
+    "word": "elaborate",
+    "meaning": "adj. 精巧复杂的；v. 详细阐述",
+    "phrases": [
+      {
+        "text": "elaborate design / rules",
+        "important": true
+      },
+      {
+        "text": "elaborate on/upon sth.",
+        "important": true
+      }
+    ],
+    "examples": [
+      "Could you elaborate on your plan for summer study?"
+    ],
+    "notes": "to n. elaboration 精心阐述；详细制作",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "elaboration"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "inhabitant",
+    "word": "inhabitant",
+    "meaning": "n. 长期定居的人或其它生物",
+    "phrases": [
+      {
+        "text": "local inhabitants",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The lake's inhabitants include rare birds and local villagers."
+    ],
+    "notes": "deri. inhabit vt. 栖居于；habitat n. 栖息地",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "inhabit",
+        "habitat"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "catastrophic",
+    "word": "catastrophic",
+    "meaning": "adj. 灾难性的",
+    "phrases": [
+      {
+        "text": "catastrophic failure / devastation",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The region suffered catastrophic devastation after the natural disaster."
+    ],
+    "notes": "syn. disastrous；to n. catastrophe 灾难",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [
+        "disastrous"
+      ],
+      "antonyms": [],
+      "derivatives": [
+        "catastrophe"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "drift",
+    "word": "drift",
+    "meaning": "v. 漂流；（目标、观念等）偏离；浑浑噩噩度日；n. 漂流",
+    "phrases": [
+      {
+        "text": "drift along the river",
+        "important": true
+      },
+      {
+        "text": "drift away (from sth.) 偏离…",
+        "important": true
+      },
+      {
+        "text": "drift apart （人与人）渐行渐远",
+        "important": true
+      },
+      {
+        "text": "the drift of public opinion / temperature drift",
+        "important": false
+      }
+    ],
+    "examples": [
+      "Without self-discipline, you will gradually drift away from your study objectives."
+    ],
+    "notes": "",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "static",
+    "word": "static",
+    "meaning": "adj. 静止的；静态的；静电的；n. 静电",
+    "phrases": [
+      {
+        "text": "static lifestyle",
+        "important": true
+      },
+      {
+        "text": "static load / stress / analysis",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The world is constantly evolving, so a static mindset will hold us back."
+    ],
+    "notes": "syn. stationary；anto. dynamic, volatile",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [
+        "stationary"
+      ],
+      "antonyms": [
+        "dynamic",
+        "volatile"
+      ],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "meditate",
+    "word": "meditate",
+    "meaning": "v. 深思；冥想",
+    "phrases": [
+      {
+        "text": "meditate on/upon sth.",
+        "important": true
+      },
+      {
+        "text": "meditate in silence",
+        "important": true
+      }
+    ],
+    "examples": [
+      "He meditated on his study plan for the summer vacation."
+    ],
+    "notes": "to n. meditation 沉思；syn. contemplate",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [
+        "contemplate"
+      ],
+      "antonyms": [],
+      "derivatives": [
+        "meditation"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "iconic",
+    "word": "iconic",
+    "meaning": "adj. 标志性的",
+    "phrases": [
+      {
+        "text": "iconic landmark / figure",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The canyon is one of the most iconic natural landscape in the region."
+    ],
+    "notes": "to n. icon 图标；偶像；象征符号",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "icon"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "dip",
+    "word": "dip",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "canyon",
+    "word": "canyon",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "lush",
+    "word": "lush",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "limestone",
+    "word": "limestone",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "spectator",
+    "word": "spectator",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "fluidity",
+    "word": "fluidity",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "unassailable",
+    "word": "unassailable",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "ritual",
+    "word": "ritual",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "fortification",
+    "word": "fortification",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "dread",
+    "word": "dread",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "doctoral",
+    "word": "doctoral",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "fixate",
+    "word": "fixate",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "discreet",
+    "word": "discreet",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "prowess",
+    "word": "prowess",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "populate",
+    "word": "populate",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "biometric",
+    "word": "biometric",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "catalog",
+    "word": "catalog",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "tale",
+    "word": "tale",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "consign",
+    "word": "consign",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "devastation",
+    "word": "devastation",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  }
+]

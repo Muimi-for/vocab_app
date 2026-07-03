@@ -3,7 +3,7 @@
  * 提供 PWA 离线缓存支持
  */
 
-const CACHE_NAME = 'vocab-pwa-v1';
+const CACHE_NAME = 'vocab-pwa-v2';
 const ASSETS = [
     '/',
     '/index.html',
@@ -22,8 +22,21 @@ const ASSETS = [
     '/network.css',
     '/network.js',
     '/repair.html',
+    '/import.html',
+    '/import-tool.html',
+    '/import-batch-08.html',
+    '/import-batch-09.html',
     '/lib/d3.v7.min.js',
     '/manifest.json',
+    '/data/words-batch-01.json',
+    '/data/words-batch-02.json',
+    '/data/words-batch-03.json',
+    '/data/words-batch-04.json',
+    '/data/words-batch-05.json',
+    '/data/words-batch-06.json',
+    '/data/words-batch-07.json',
+    '/data/words-batch-08.json',
+    '/data/words-batch-09.json',
     '/icon-192.png',
     '/icon-512.png'
 ];

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇随记 - 导入第 9 天词汇</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <style>
+        .import-card { text-align: center; max-width: 480px; margin: 0 auto; }
+        .import-card h2 { color: var(--primary); margin-bottom: 8px; }
+        .import-card p { color: var(--text-secondary); margin-bottom: 20px; }
+        .message { margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 0.95rem; }
+        .message.success { background: #d1fae5; color: #065f46; }
+        .message.error { background: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>导入第 9 天词汇</h1>
+            <p>28 个词条</p>
+        </header>
+
+        <section class="card import-card">
+            <h2>一键导入</h2>
+            <p>点击按钮将第 9 天词汇添加到本地存储。已存在的单词会自动跳过。</p>
+            <button id="import-btn" class="review-btn">开始导入</button>
+            <div id="message"></div>
+            <div class="back-link">
+                <a href="import.html">← 返回导入中心</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="/register-sw.js"></script>
+    <script>
+        const STORAGE_KEY = 'vocab_words';
+        const BATCH_FILE = 'data/words-batch-09.json';
+
+        document.getElementById('import-btn').addEventListener('click', async function () {
+            const messageEl = document.getElementById('message');
+            try {
+                const resp = await fetch(BATCH_FILE);
+                if (!resp.ok) throw new Error('无法加载词汇数据');
+                const batchData = await resp.json();
+
+                const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                const existingIds = new Set(existing.map(w => w.id));
+                let added = 0;
+                let skipped = 0;
+
+                batchData.forEach(word => {
+                    if (existingIds.has(word.id)) {
+                        skipped++;
+                    } else {
+                        existing.push(word);
+                        existingIds.add(word.id);
+                        added++;
+                    }
+                });
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+                messageEl.className = 'message success';
+                messageEl.innerHTML = `导入成功！新增 ${added} 个单词，跳过 ${skipped} 个重复。<br><a href="index.html">返回首页</a>`;
+            } catch (err) {
+                messageEl.className = 'message error';
+                messageEl.textContent = '导入失败：' + err.message;
+            }
+        });
+    </script>
+</body>
+</html>

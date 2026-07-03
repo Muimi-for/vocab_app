@@ -1,0 +1,520 @@
+[
+  {
+    "id": "domestic",
+    "word": "domestic",
+    "meaning": "adj. 国内的；家庭的；家养的",
+    "phrases": [
+      {
+        "text": "domestic market / industry",
+        "important": true
+      },
+      {
+        "text": "domestic violence / chores",
+        "important": true
+      },
+      {
+        "text": "domestic animals",
+        "important": true
+      }
+    ],
+    "examples": [
+      "We should boost domestic demand to promote steady economic growth."
+    ],
+    "notes": "anto. foreign；root. dom 家、居所 → dominate, domicile",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [
+        "foreign"
+      ],
+      "derivatives": [],
+      "confusable": [],
+      "roots": [
+        "dom"
+      ]
+    }
+  },
+  {
+    "id": "strip",
+    "word": "strip",
+    "meaning": "n. 长条；v. 剥去；剥夺；拆分",
+    "phrases": [
+      {
+        "text": "a strip of gauze / bandage / fabric / coastal strip",
+        "important": true
+      },
+      {
+        "text": "strip sth. off / away",
+        "important": true
+      },
+      {
+        "text": "strip sb. of sth.",
+        "important": true
+      },
+      {
+        "text": "strip down sth.",
+        "important": true
+      }
+    ],
+    "examples": [
+      "Excessive rigid rules may strip people of their creativity."
+    ],
+    "notes": "syn. deprive；易混词 stripe 条纹",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [
+        "deprive"
+      ],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [
+        "stripe"
+      ],
+      "roots": []
+    }
+  },
+  {
+    "id": "devise",
+    "word": "devise",
+    "meaning": "v. 设计，构思",
+    "phrases": [
+      {
+        "text": "devise a plan / a solution / a circuit",
+        "important": true
+      }
+    ],
+    "examples": [
+      "It is necessary to devise reasonable schedules to balance study and rest."
+    ],
+    "notes": "to n. device 设备",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "device"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "rigid",
+    "word": "rigid",
+    "meaning": "adj. 僵化的，一成不变的；不易变形的",
+    "phrases": [
+      {
+        "text": "rigid thinking / regulations",
+        "important": true
+      },
+      {
+        "text": "rigid body 刚体",
+        "important": true
+      }
+    ],
+    "examples": [
+      "We should reject rigid study modes and adjust plans according to our actual situation."
+    ],
+    "notes": "deri. rigorous 严密的；严格的",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "rigorous"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "resemble",
+    "word": "resemble",
+    "meaning": "vt. 像",
+    "phrases": [
+      {
+        "text": "resemble sb./sth.",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The two amplifier circuits closely resemble each other."
+    ],
+    "notes": "to n. resemblance 相似",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "resemblance"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "disposal",
+    "word": "disposal",
+    "meaning": "n. 处理；清理；支配权",
+    "phrases": [
+      {
+        "text": "waste disposal / garbage disposal / sewage disposal",
+        "important": true
+      },
+      {
+        "text": "at one's disposal 任某人支配",
+        "important": true
+      }
+    ],
+    "examples": [
+      "We must follow safety norms for the proper disposal of used lithium batteries."
+    ],
+    "notes": "to v. dispose 处理；安排",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "dispose"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "elusive",
+    "word": "elusive",
+    "meaning": "adj. 难以达到的；难以捉摸的；难以回忆的",
+    "phrases": [
+      {
+        "text": "elusive goal / success",
+        "important": true
+      },
+      {
+        "text": "elusive signal",
+        "important": true
+      }
+    ],
+    "examples": [
+      "True inner peace is often elusive amid endless study anxiety."
+    ],
+    "notes": "to v. elude 逃避；难倒；使难以得到",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [
+        "elude"
+      ],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "unveil",
+    "word": "unveil",
+    "meaning": "v. 揭晓；揭露",
+    "phrases": [
+      {
+        "text": "unveil a policy / the truth",
+        "important": true
+      }
+    ],
+    "examples": [
+      "The institute unveiled a set of standards for the safe disposal of electronic waste."
+    ],
+    "notes": "",
+    "isImportant": true,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": {
+      "synonyms": [],
+      "antonyms": [],
+      "derivatives": [],
+      "confusable": [],
+      "roots": []
+    }
+  },
+  {
+    "id": "gauze",
+    "word": "gauze",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "sterile",
+    "word": "sterile",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "surgical",
+    "word": "surgical",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "clumsy",
+    "word": "clumsy",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "fabric",
+    "word": "fabric",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "bandage",
+    "word": "bandage",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "companion",
+    "word": "companion",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "postdoctoral",
+    "word": "postdoctoral",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "faint",
+    "word": "faint",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "spectrum",
+    "word": "spectrum",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "astronomer",
+    "word": "astronomer",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "spectral",
+    "word": "spectral",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "baffle",
+    "word": "baffle",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "thermal",
+    "word": "thermal",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "noxious",
+    "word": "noxious",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "sulfide",
+    "word": "sulfide",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "ammonia",
+    "word": "ammonia",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "creep",
+    "word": "creep",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "emanate",
+    "word": "emanate",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  },
+  {
+    "id": "copilot",
+    "word": "copilot",
+    "meaning": "",
+    "phrases": [],
+    "examples": [],
+    "notes": "",
+    "isImportant": false,
+    "createdAt": "2026-07-03",
+    "lastReviewedAt": null,
+    "reviewLevel": 0,
+    "relations": null
+  }
+]
